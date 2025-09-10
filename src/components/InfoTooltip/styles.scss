@@ -1,0 +1,35 @@
+.cg-info-tooltip {
+    
+    .info-tooltip-button {
+      cursor: pointer;    
+      outline: none;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      width: 28px;
+      height: 28px;
+
+      &:hover {
+        outline-style: solid;
+        outline-color: #44d5e5;
+        outline-width: 2px;
+        box-shadow: 0 0 2px .25rem rgba(68, 213, 229, .5) !important;
+        border-radius: 100%; 
+      }
+    }
+}
+
+.MuiTooltip-tooltip {
+  font-size: .9rem !important;
+  font-family: "Roboto" !important;
+  font-weight: normal !important;
+  line-height: 1.5 !important;
+  padding: 12px !important;
+  min-width: 350px !important;
+  background-color: rgba(58, 64, 71, .99) !important;
+}
+
+.MuiTooltip-arrow::before {
+  background-color: rgba(58, 64, 71, .99) !important;
+}
+    

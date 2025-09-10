@@ -1,0 +1,55 @@
+.my-retirement-goals-container {
+    width: 100%;
+  
+    .review-goals-link {
+      padding-bottom: 1rem;
+    }
+
+    .legends {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .legend-item {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 15px;
+      font-size: 0.9rem;
+    }
+    .legend-colorbox {
+      flex: 0 0 auto;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+    .legend-title {
+      color: #000;
+      word-break: break-word;
+    }
+  
+    .legend-value {
+      flex: 1 0 auto;
+      text-align: right;
+      margin-left: 0.5rem !important;
+      font-weight: 700;
+    }
+
+    .chart-title-container {
+      margin: auto;
+      width: 75%;
+      padding: 10px;
+      text-align: center;
+
+      .chart-text {
+        font-size: .9rem;
+        padding: 10px;
+      }
+
+      .chart-value {
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+    }
+  }
+  

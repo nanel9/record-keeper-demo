@@ -1,0 +1,29 @@
+.contributions-container {
+    max-width: 1140px; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+
+    .contributions-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;    
+    }
+
+    .contributions-card {
+        background-color: #fff;
+
+        .contributions-card-content {
+            padding: 30px 40px
+        }
+    }
+
+
+    .contributions-header {
+        font-size: 1.75rem;
+        letter-spacing: -0.29px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+
+}

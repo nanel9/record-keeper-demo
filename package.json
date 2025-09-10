@@ -1,0 +1,73 @@
+{
+  "name": "beta-retirement",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "build": {
+    "appId": "com.rkd.beta-retirement",
+    "productName": "RKD",
+    "files": [
+      "build/**/*",
+      "public/electron.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@react-input/mask": "^2.0.4",
+    "antd": "^5.27.2",
+    "classnames": "^2.5.1",
+    "cra-template": "1.3.0",
+    "highcharts": "^7.1.1",
+    "highcharts-react-official": "^3.2.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^6.15.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.90.0"
+  },
+  "scripts": {
+    "start:react": "react-scripts start",
+    "start:electron": "electron public/electron.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist:all": "electron-builder -mw"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^37.4.0",
+    "electron-builder": "^26.0.12",
+    "electron-is-dev": "^3.0.1"
+  }
+}

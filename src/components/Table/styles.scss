@@ -1,0 +1,59 @@
+.cg-table {
+
+    .table-header {
+        font-size: 1.5rem;
+        letter-spacing: -0.24px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        border-bottom: 1px solid #666;
+        border-top: 1px solid hsl(0, 0%, 80%);
+        background-color: #e9ecef;
+        th {
+          padding: 0.85rem;
+          vertical-align: middle !important;
+          border-top: none;
+          font-size: 0.85rem;
+          min-height: 45px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #ccc;
+        td {
+          padding: 0.85rem;
+          vertical-align: middle !important;
+          border-top: none;
+          line-height: 35px !important;
+          font-size: 0.85rem;
+        }
+        &:last-of-type {
+          border-bottom: 1px solid #666;
+        }
+      }
+    }
+
+    tfoot {
+      tr {
+        border-top: 1px solid #666;
+        td {
+          padding: 15px;
+          vertical-align: middle !important;
+          border-top: none;
+          font-weight: 600;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}

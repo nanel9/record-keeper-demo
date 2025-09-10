@@ -1,0 +1,105 @@
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0px 10px;
+        height: 35px;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: .9rem;
+
+        a {
+            color: var(--neutrals-black);
+            text-decoration: none;
+
+            &:hover {
+                background-color: #005f9e !important;
+                color: var(--neutrals-white) !important;
+            }
+        }
+
+        &:hover {
+            background-color: #005f9e !important;
+            color: var(--neutrals-white) !important;
+
+            a {
+                color: var(--neutrals-white) !important;
+            }
+        }
+
+        &.opened {
+            background-color: #005f9e;
+            color: var(--neutrals-white) !important;
+        }
+
+        &.active {
+            background-color: #ececec;
+            color: var(--neutrals-black);
+        }
+    }
+
+    .nav-menu-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.secondary-nav {
+    display: none;
+    flex: 0 1 100%;
+    background-color: #011d2a;
+    padding: 32px;
+    color: #fff;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    max-width: 1076px;
+    
+    
+    .quick-links-title {
+        flex: 0 1  calc(1 / 3 * 100%);
+        display: inline-flex;
+        padding: 0;
+        font-size: 1rem;
+        letter-spacing: -0.16px;
+        font-weight: 300;
+    }
+
+    .secondary-nav-menu-item {
+        flex: 0 1  calc(1 / 3 * 100%);
+        display: inline-flex;
+        min-height: 2rem;
+
+        a {
+            color: #fff;
+            font-size: .9rem;
+            padding: 4px 4px 4px 20px;
+            margin: 10px 0;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            border-left: 5px solid transparent;
+
+            &:hover {
+                border-color: #fff;
+                background-color: rgba(255, 255, 255, .2) !important;
+                border-left: 5px solid #fff;
+            }
+        }
+    }
+
+    &.opened {
+        display: flex;
+    }
+
+}

@@ -1,0 +1,97 @@
+.contributions-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    .contributions-details-header {
+        font-size: 1.5rem;
+        letter-spacing: -0.29px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+
+    .contributions-details-bullets {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: space-between;
+    }
+
+    .contributions-details-bullet {
+        padding: 18px 14px;
+        background-color: #e9ecef;
+        width: 33.33%;
+    }
+
+    .contributions-details-bullet-content {
+        padding: 0 1.5rem !important;
+        text-align: center;
+    }
+
+    .contributions-details-bullet-title {
+        line-height: 20px;
+        font-size: .9rem;
+        color: #000;
+    }
+
+    .contributions-details-bullet-value {
+        line-height: 20px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .contributions-details-print a {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .contributions-details-footer {
+        font-size: .9rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .contributions-details-table-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contributions-details-fixed-table {
+        width: 225px;
+        border-right: 1px solid #babfc7;
+    }
+
+    .contributions-details-scrolled-table {
+        width: 830px;
+        overflow-x: scroll;
+    }
+
+    .contributions-details-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        button {
+            width: 375px;
+        }
+    }
+
+    .cg-table {
+        width: 1020px;   
+    }
+
+
+    .table-header-blue {
+        color: #005f9e;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-position: under;
+        cursor: pointer;
+    }
+}
+

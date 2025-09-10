@@ -1,0 +1,50 @@
+.main-grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  max-width: 1140px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-grid-item {
+  background-color: #fff;
+  height: auto;
+}
+
+.withPadding {
+  padding: 2rem 1.5rem;
+}
+
+.grid-col-2 {
+  grid-column: auto / span 4;
+}
+
+.grid-col-1 {
+  grid-column: auto / span 2;
+}
+
+.grid-col-full {
+  grid-column: auto / span 6;
+}
+
+.main-grid-item .header {
+  font-size: 1.5rem;
+  letter-spacing: -0.24px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+/* button */
+.cg-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  
+  button {
+     margin-top: 0;
+  }
+}

@@ -1,0 +1,26 @@
+.financial-professional-container {
+  width: 100%;
+
+  .financial-professional-content {
+    padding: 0 0 1.2rem 0;
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 0.9rem;
+    font-weight: normal;
+
+    .title {
+      font-weight: 700;
+    }
+
+    .name {
+      margin-top: 0.25rem;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      margin: 4px 0;
+      align-items: center;
+    }
+  }
+}

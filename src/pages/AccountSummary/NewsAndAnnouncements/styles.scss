@@ -1,0 +1,19 @@
+.news-and-announcements-container {
+    width: 100%;
+    .news-and-announcements-list {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+  
+    .news-and-announcements-item {
+      font-size: .9rem;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+  
+    .news-and-announcement-divider {
+      border-top: 1px solid #ddd !important;
+      margin: 10px 0px;
+    }
+  }

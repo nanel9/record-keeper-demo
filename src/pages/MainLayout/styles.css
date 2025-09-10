@@ -1,0 +1,23 @@
+.main-layout-container {
+    background-color: #e2e2e2;
+    height: 100%;
+}
+
+.footer {
+    height: 100px;
+}
+
+
+a {
+    color: #005f9e;
+    font-size: .9rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-position: under;
+    line-height: 1.5rem;
+
+    &.link-no-underline {
+        text-decoration: none;
+    }
+}

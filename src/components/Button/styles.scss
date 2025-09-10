@@ -1,0 +1,43 @@
+.cg-button {
+    margin-top: 1.5rem;
+    height: calc(1.5em + 0.75rem + 2px);
+    font-size: 1rem;
+    line-height: 130%;
+    font-weight: 500;
+    padding: 0 10px;
+    border-radius: 0;
+    font-family: "Roboto";
+    border: 2px solid #005f9e;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: .65;
+    }
+
+    &.full {
+        width: 100%;
+    }
+
+    &.small {
+        margin-top: 0;
+        height: 45px;
+        width: unset;
+    }
+
+    &.primary {
+        background-color: #00294b !important;
+        border-color: #00294b !important;
+        color: #fff;
+    }
+
+    &.secondary {
+        background-color: #e2e2e2 !important;
+        border-color: #e2e2e2 !important;
+        color: #005f9e;
+        
+        &:focus {
+            box-shadow: 0 0 0 .1rem #005f9e !important;
+        }
+    }
+}

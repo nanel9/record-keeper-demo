@@ -1,0 +1,100 @@
+.portfolio-balances-container {
+    width: 100%;
+
+    .portfolio-balances-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio-balances-chart {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio-balances-header {
+        font-size: 1.75rem;
+        letter-spacing: -0.29px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+
+    .portfolio-balances-title {
+       margin-top: 1.5rem;
+       margin-bottom: 1rem;
+       font-size: 1.25rem;
+       color: #000;
+       line-height: 120%;
+       font-weight: 700;
+    }
+
+    .portfolio-balances-totals {
+        padding: 0 16px 0 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .portfolio-balances-total {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 14px;
+        background-color: #e9ecef;
+    }
+
+    .portfolio-balances-total-label {
+        line-height: 22px;
+        font-size: .9rem;
+        font-weight: normal;
+        color: #000;
+    }
+
+    .portfolio-balances-total-value {
+        line-height: 22px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .portfolio-balances-tabs {
+        padding: 0 32px 0 32px;
+        border-left: 1px solid #d4d4d4;
+        flex: 0 0 66.66%;
+        max-width: 66.66%;
+    }
+  
+    .legends {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+    }
+  
+    .legend-item {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e9ecef;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 0.9rem;
+    }
+    .legend-colorbox {
+      flex: 0 0 auto;
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+    .legend-title {
+      color: #000;
+      word-break: break-word;
+    }
+  
+    .legend-value {
+      flex: 1 0 auto;
+      text-align: right;
+      margin-left: 0.5rem !important;
+      font-weight: 700;
+    }
+  }

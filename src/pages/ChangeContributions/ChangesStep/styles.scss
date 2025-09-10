@@ -1,0 +1,15 @@
+.changes-contributions-container {
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--neutrals-white);
+    padding: 30px 40px;
+    .changes-contributions-form {
+        max-width: 721px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+}

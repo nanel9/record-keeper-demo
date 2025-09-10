@@ -1,0 +1,73 @@
+.portfolio-current-container {
+    width: 100%;
+    max-width: 721px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .portfolio-current-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio-current-chart {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio-current-header {
+        font-size: 1.75rem;
+        letter-spacing: -0.29px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+
+    .portfolio-current-title {
+       margin-top: 1.5rem;
+       margin-bottom: 1rem;
+       font-size: 1.25rem;
+       color: #000;
+       line-height: 120%;
+       font-weight: 700;
+    }
+
+    .portfolio-current-tabs {
+        padding: 0 32px 0 32px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+  
+    .legends {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+    }
+  
+    .legend-item {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e9ecef;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 0.9rem;
+    }
+    .legend-colorbox {
+      flex: 0 0 auto;
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+    .legend-title {
+      color: #000;
+      word-break: break-word;
+    }
+  
+    .legend-value {
+      flex: 1 0 auto;
+      text-align: right;
+      margin-left: 0.5rem !important;
+      font-weight: 700;
+    }
+  }

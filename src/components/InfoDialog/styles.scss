@@ -1,0 +1,44 @@
+.cg-info-dialog {
+    width: 380px;
+    padding: 15px 32px;
+    background-color: var(--neutrals-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    .dialog-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .dialog-title {
+      font-size: 18px;
+      color: #005f9e;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  
+    .dialog-content {
+      font-size: .9rem;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+  
+    .dialog-footer {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    button {
+      margin: 0 4px 4px 4px;
+      height: 45px !important;
+    }
+  }

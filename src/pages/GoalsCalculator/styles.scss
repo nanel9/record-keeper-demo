@@ -1,0 +1,51 @@
+.goals-calculator-container {
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .goals-calculator-instructions {
+        background-color: var(--neutrals-white);
+        padding: 20px;
+        line-height: 1.5;
+        font-size: .9rem;
+    }
+
+    .goals-calculator-content {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: space-between;
+    }
+    .goals-calculator-chart {
+        background-color: var(--neutrals-white);
+        padding: 30px 40px;
+        width: 100%;
+    }
+    .goals-calculator-form {
+        background-color: var(--neutrals-white);
+        padding: 30px 40px;
+        width: 100%;
+    }
+
+    .goals-calculator-footer {
+        background-color: var(--neutrals-white);
+        padding: 30px 40px;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            width: 150px;
+        }
+    }
+
+    .goals-calculator-disclaimer {
+        font-size: 14px;
+        color: #000;
+        padding: 20px 40px;
+        line-height: calc(0.85rem + 4px);
+    }
+}

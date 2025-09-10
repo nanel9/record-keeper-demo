@@ -1,0 +1,26 @@
+.my-portfolio-container {
+    max-width: 1140px; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+
+    .my-portfolio-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;    
+    }
+    
+
+    .my-portfolio-links {
+        padding: 30px 50px;
+        background-color: #fff;
+    }
+
+    .my-portfolio-card {
+        background-color: #fff;
+
+        .my-portfolio-card-content {
+            padding: 30px 40px
+        }
+    }
+}

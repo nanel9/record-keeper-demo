@@ -1,0 +1,56 @@
+/* Tabs */
+.cg-tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+  
+.cg-tab-button {
+  width: 100%;
+  line-height: 1.25rem;
+  align-items: center;
+  border-radius: 0;
+  border: 1px solid #009cdc;
+  padding: .375rem .75rem;
+  color: #1f5670;
+  background-color: #fff;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+    
+    &:hover {
+      color: #fff;
+      background-color: #009cdc;
+      border-color: #009cdc;
+    }
+    
+    &.active {
+      color: #fff;
+      background-color: #009cdc;
+      border-color: #4e555b;
+      z-index: 1;
+    }
+}
+
+.cg-tab-header {
+  width: 100%;
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  color: #005f9e;
+  font-weight: 500;
+  border-bottom: 2px solid #d4d4d4;
+  font-size: .9rem;
+  font-family: "Roboto" !important;
+
+  &.active, &:hover {  
+    border-bottom: 3px solid #005f9e;
+  }
+}

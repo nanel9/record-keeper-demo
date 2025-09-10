@@ -1,0 +1,16 @@
+.cg-header-container {
+    padding: 25px 40px;
+    color: #fff;
+    background-color: #005f9e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        font-size: 2rem;
+        line-height: 120%;
+        font-weight: 500;
+    }
+    
+}

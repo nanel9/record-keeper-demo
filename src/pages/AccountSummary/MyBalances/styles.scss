@@ -1,0 +1,36 @@
+.my-balances-container {
+    width: 100%;
+  
+    .legends {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .legend-item {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e9ecef;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 0.9rem;
+    }
+    .legend-colorbox {
+      flex: 0 0 auto;
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+    .legend-title {
+      color: #000;
+      word-break: break-word;
+    }
+  
+    .legend-value {
+      flex: 1 0 auto;
+      text-align: right;
+      margin-left: 0.5rem !important;
+      font-weight: 700;
+    }
+  }

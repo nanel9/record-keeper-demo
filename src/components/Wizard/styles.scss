@@ -1,0 +1,109 @@
+.cg-wizard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .wizard-header-container {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 80px;
+      align-items: center;
+      background-color: #005f9e;
+      color: var(--neutrals-white);
+    }
+
+    .wizard-header {
+      width: 100%;
+      max-width: 1140px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .wizard-title {
+      flex: 1 1; 
+    }
+
+    .wizard-content {
+      width: 100%;
+      max-width: 1140px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .wizard-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin: 40px 0 20px 0;
+
+      button {
+       width: 150px;
+      }
+    }
+
+    .wizard-step {
+      display: none;
+     
+      &.active {
+        display: block;
+      }
+    }
+
+    .wizard-close a{
+        color: var(--neutrals-white);
+    }
+}
+
+.wizard-dialog-container {
+  width: 300px;
+  padding: 40px 29px 39px 29px;
+  background-color: var(--neutrals-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wizard-dialog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .wizard-dialog-title {
+    font-size: 18px;
+    color: #005f9e;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .wizard-dialog-content {
+    font-size: .9rem;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+  .wizard-dialog-footer {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  button {
+    margin: 0 4px 4px 4px;
+    height: 45px !important;
+  }
+}

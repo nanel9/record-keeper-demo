@@ -1,0 +1,72 @@
+.portfolio-results-container {
+    width: 100%;
+
+    .portfolio-results-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio-results-chart {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio-results-header {
+        font-size: 1.75rem;
+        letter-spacing: -0.29px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+
+    .portfolio-results-title {
+       margin-bottom: 1rem;
+       font-size: 1.25rem;
+       color: #000;
+       line-height: 120%;
+       font-weight: 700;
+    }
+
+    .portfolio-results-text {
+        font-size: .9rem;
+        line-height: 1.5;
+        color: #000;
+        margin-bottom: 48px;
+    }
+
+    .portfolio-results-totals {
+        padding: 0 16px 0 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .portfolio-results-total {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 14px;
+        background-color: #e9ecef;
+    }
+
+    .portfolio-results-total-label {
+        line-height: 22px;
+        font-size: .9rem;
+        font-weight: normal;
+        color: #000;
+    }
+
+    .portfolio-results-total-value {
+        line-height: 22px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .portfolio-results-tabs {
+        padding: 0 32px 0 32px;
+        border-left: 1px solid #d4d4d4;
+        flex: 0 0 66.66%;
+        max-width: 66.66%;
+    }
+  }
