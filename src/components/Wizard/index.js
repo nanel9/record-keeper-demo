@@ -70,6 +70,7 @@ const Wizard = (props) => {
       <div className="cg-wizard">
         <div className="wizard-header-container">
           <div className="wizard-header">
+            <div className="wizard-space"></div>
             <div className="wizard-title">{title}</div>
             <div className="wizard-close">
               <a onClick={handleOpenDialog}>Cancel</a>

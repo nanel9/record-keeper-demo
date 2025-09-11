@@ -12,13 +12,17 @@ const InputText = (props) => {
     label,
     name,
     type,
+    inputmode,
     placeholder,
     required = false,
     errorMessage,
     mask = {},
     onChangeExternal,
     value,
+    prefix,
+    suffix,
     setValue,
+    align = "left",
   } = props;
   const inputRef = useMask(mask);
   const [isPristine, setIsPristine] = useState(true);
@@ -51,40 +55,47 @@ const InputText = (props) => {
   return (
     <div className="cg-input-text">
       {label && <label htmlFor={name}>{label}</label>}
+
       <div className="input-container">
-          <input
-            onChange={(event) => validateRequired(event)}
-            type={showPassword ? "text" : type}
-            id={name}
-            name={name}
-            placeholder={placeholder}
-            ref={mask.mask ? inputRef : null}
-            value={value}
-          />
-        <span
-          className={classNames("input-error-warning", {
-            hidden: !isErrorVisible(),
-          })}
-        >
-          <ErrorIcon sx={{ width: 24, height: 24 }} />
-        </span>
-        <span
-          className={classNames("input-show-password", {
-            hidden: isErrorVisible() || type !== "password",
-          })}
-        >
-          {showPassword ? (
-            <VisibilityOffIcon
-              sx={{ width: 24, height: 24 }}
-              onClick={toggleShowPassword}
+        {prefix && <div className="input-prefix">{prefix}</div>}
+        <div className="input-content">
+            <input
+              className={align}
+              onChange={(event) => validateRequired(event)}
+              type={showPassword ? "text" : type}
+              id={name}
+              name={name}
+              placeholder={placeholder}
+              ref={mask.mask ? inputRef : null}
+              value={value}
+              inputmode={inputmode}
             />
-          ) : (
-            <VisibilityIcon
-              sx={{ width: 24, height: 24 }}
-              onClick={toggleShowPassword}
-            />
-          )}
-        </span>
+          <span
+            className={classNames("input-error-warning", {
+              hidden: !isErrorVisible(),
+            })}
+          >
+            <ErrorIcon sx={{ width: 24, height: 24 }} />
+          </span>
+          <span
+            className={classNames("input-show-password", {
+              hidden: isErrorVisible() || type !== "password",
+            })}
+          >
+            {showPassword ? (
+              <VisibilityOffIcon
+                sx={{ width: 24, height: 24 }}
+                onClick={toggleShowPassword}
+              />
+            ) : (
+              <VisibilityIcon
+                sx={{ width: 24, height: 24 }}
+                onClick={toggleShowPassword}
+              />
+            )}
+          </span>
+        </div>
+        {suffix && <div className="input-suffix">{suffix}</div>}
       </div>
       <div className={classNames("input-error", { hidden: !isErrorVisible() })}>
         {required ? (errorMessage ? errorMessage : `${label} is required`) : ""}

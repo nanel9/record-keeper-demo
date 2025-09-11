@@ -5,6 +5,9 @@
         letter-spacing: -0.24px;
         font-weight: 300;
         margin-bottom: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
 
@@ -55,5 +58,9 @@
         }
       }
     }
+  }
+
+  .cg-button {
+   margin: 0;
   }
 }

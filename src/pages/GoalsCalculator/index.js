@@ -1,6 +1,7 @@
 import React from "react";
 import { Wizard, Button } from "../../components";
 import GoalsCalculatorForm from "./GoalsCalculatorForm";
+import GoalsCalculatorChart from "./GoalsCalculatorChart";
 import "./styles.scss";
 
 const GoalsCalculator = () => {
@@ -21,7 +22,9 @@ const GoalsCalculator = () => {
           your retirement plans.
         </div>
         <div className="goals-calculator-content">
-          <div className="goals-calculator-chart">2</div>
+          <div className="goals-calculator-chart">
+            <GoalsCalculatorChart />
+          </div>
           <div className="goals-calculator-form">
             <GoalsCalculatorForm />
           </div>

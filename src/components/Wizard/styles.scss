@@ -5,7 +5,7 @@
 
     .wizard-header-container {
       position: sticky;
-      top: 0;
+      top: 40px;
       z-index: 1;
       text-align: center;
       display: flex;
@@ -26,8 +26,19 @@
       justify-content: space-between;
     }
 
+    .wizard-space {
+      flex: 1 1;
+    }
+
     .wizard-title {
       flex: 1 1; 
+      font-weight: 600;
+    }
+
+    .wizard-close {
+      flex: 1 1;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .wizard-content {

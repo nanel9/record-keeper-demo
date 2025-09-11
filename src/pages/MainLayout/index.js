@@ -6,6 +6,7 @@ import MyPortfolio from '../MyPortfolio';
 import Contributions from '../Contributions';
 import ChangeContributions from '../ChangeContributions';
 import GoalsCalculator from '../GoalsCalculator';
+import SavingAccounts from '../SavingAccounts';
 import './styles.css';
 
 const MainLayout = () => {
@@ -20,6 +21,7 @@ const MainLayout = () => {
               <Route path="/contributions" element={<Contributions />} />
               <Route path="/change-contributions" element={<ChangeContributions />} />
               <Route path="/goals-calculator" element={<GoalsCalculator />} />
+              <Route path="/saving-accounts" element={<SavingAccounts />} />
               <Route
                   path="*"
                   element={<Navigate to="/account-summary" replace />}

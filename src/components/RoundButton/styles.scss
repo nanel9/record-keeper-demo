@@ -1,0 +1,21 @@
+.cg-round-button {
+    
+  .round-button {
+    cursor: pointer;    
+    outline: none;
+    border: none;
+    background-color: #0074C2;
+    border-radius: 100%;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      outline-style: solid;
+      outline-color: #44d5e5;
+      outline-width: 2px;
+      box-shadow: 0 0 2px .25rem rgba(68, 213, 229, .5) !important;
+      border-radius: 100%; 
+    }
+  }
+}

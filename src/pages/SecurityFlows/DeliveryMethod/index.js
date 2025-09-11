@@ -36,7 +36,7 @@ const DeliveryMethod = ({ flow }) => {
           />
           <div className="delivery-method-card">
             <div className="email-radio">
-              <RadioButton label="Email" />
+              <RadioButton label="Email" checked={true}/>
               <div>d*******@*******.com</div>
             </div>
             <EmailIcon sx={{ width: 32, height: 32, color: "#5D738A" }} />

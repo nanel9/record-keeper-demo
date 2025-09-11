@@ -34,7 +34,7 @@ const EnterPassCode = ({ flow }) => {
           </div>
 
           <div className="passcode-input">
-            <InputText type="text" name="passcode" required value="0777012"/>
+            <InputText align="center" type="text" name="passcode" required value="0777012"/>
           </div>
 
           <a className="text-center" onClick={() => navigate("/delivery-method")}>

@@ -62,12 +62,13 @@
     .legend-title {
       color: #000;
       word-break: break-word;
+      font-weight: 600;
     }
   
     .legend-value {
       flex: 1 0 auto;
       text-align: right;
       margin-left: 0.5rem !important;
-      font-weight: 700;
+      font-weight: 600;
     }
   }

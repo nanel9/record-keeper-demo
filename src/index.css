@@ -1,3 +1,90 @@
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-UltraLight-11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-UltraLightItalic-12.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-Regular-08.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-Italic-05.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-Medium-06.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-MediumItalic-07.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-DemiBold-03.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-DemiBoldItalic-04.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-Bold-01.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-BoldItalic-02.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-Heavy-09.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('/public/fonts/AvenirNext-HeavyItalic-10.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
 html {
   height: 100%;
   background-color: #e2e2e2;
@@ -19,7 +106,7 @@ code {
 
 #root {
   height: 100%;
-  font-family: "Roboto";
+  font-family: "AvenirNext";
 }
 
 .highcharts-credits {
@@ -78,3 +165,38 @@ p.info {
 .no-decoration {
     text-decoration: none !important;
 }
+
+button {
+    font-family: "AvenirNext";
+}
+
+
+.highcharts-legend-item {
+    font-family: "AvenirNext" !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+    
+.highcharts-axis-labels text, .highcharts-yaxis-labels text{
+    font-family: "AvenirNext" !important;
+    font-weight: 600 !important;
+    fill: #000 !important;
+}
+.highcharts-xaxis, .highcharts-yaxis {
+    font-family: "AvenirNext" !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #000 !important;
+    fill: #000 !important;
+}
+
+.highcharts-label {
+    font-family: "AvenirNext" !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+}
+
+.MuiDialog-container {
+    font-family: "AvenirNext" !important;
+}
+    

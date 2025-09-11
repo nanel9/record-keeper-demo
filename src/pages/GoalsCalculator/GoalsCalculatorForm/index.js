@@ -79,12 +79,12 @@ const GoalsCalculatorForm = () => {
             <strong>Current annual income</strong>
           </div>
           <div
-            className="goals-calculator-form-content-item-input"
-            style={{ position: "relative", right: "10px" }}
+            className="goals-calculator-form-content-item-input wider"
+            style={{ position: "relative", right: "19px" }}
           >
-            ${" "}
             <InputText
               type="text"
+              prefix="$"
               value={currentAnnualIncome}
               setValue={setCurrentAnnualIncome}
             />
@@ -102,10 +102,10 @@ const GoalsCalculatorForm = () => {
           <div className="goals-calculator-form-content-item-input">
             <InputText
               type="number"
+              suffix="%"
               value={retirementIncome}
               setValue={setRetirementIncome}
-            />{" "}
-            %
+            />
           </div>
         </div>
 
@@ -120,10 +120,10 @@ const GoalsCalculatorForm = () => {
           <div className="goals-calculator-form-content-item-input">
             <InputText
               type="number"
+              suffix="%"
               value={retirementPlanContributions}
               setValue={setRetirementPlanContributions}
-            />{" "}
-            %
+            />
           </div>
         </div>
 
@@ -138,10 +138,10 @@ const GoalsCalculatorForm = () => {
           <div className="goals-calculator-form-content-item-input">
             <InputText
               type="number"
+              suffix="%"
               value={employerContributions}
               setValue={setEmployerContributions}
-            />{" "}
-            %
+            />
           </div>
         </div>
 
@@ -156,10 +156,10 @@ const GoalsCalculatorForm = () => {
           <div className="goals-calculator-form-content-item-input">
             <InputText
               type="number"
+              suffix="%"
               value={inflationRate}
               setValue={setInflationRate}
-            />{" "}
-            %
+            />
           </div>
         </div>
 
@@ -174,10 +174,10 @@ const GoalsCalculatorForm = () => {
           <div className="goals-calculator-form-content-item-input">
             <InputText
               type="number"
+              suffix="%"
               value={salaryIncrease}
               setValue={setSalaryIncrease}
-            />{" "}
-            %
+            />
           </div>
         </div>
 

@@ -1,12 +1,12 @@
 export const getDataInvestments = function() {
     return [
     {
-        name: 'Af U.S. Government Money Market-R2',
+        name: 'American Funds 2040 Target Date-R6',
         y: 89.75,
         color: 'rgb(0, 41, 75)'
     },
     {
-        name: 'Af Global Insight Fund-R2',
+        name: 'Capital World Bond Fund-R6',
         y: 10.25,
         color: 'rgb(0, 95, 158)'
     }
@@ -16,14 +16,14 @@ export const getDataInvestments = function() {
 export const getDataContributionTypes = function() {
     return [
     {
-        name: 'Elective Deferral',
+        name: 'Employee Elective Deferral',
         y: 97.80,
         color: 'rgb(0, 41, 75)'
     },
   {
       name: 'Other',
       y: 2.20,
-      color: 'rgb(0, 95, 158)'
+      color: '#762157'
   }
 ];
 };

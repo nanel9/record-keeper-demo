@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const RadioButton = (props) => {
 
-    const {label, name, value, setValue, checked } = props;
+    const {label, name, value, setValue = () => {}, checked } = props;
     
     return (
         <label className="cg-radio-container">

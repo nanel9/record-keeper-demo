@@ -2,6 +2,7 @@
 import React from "react";
 import { Button, Table } from "../../../components";
 import PrintIcon from "@mui/icons-material/Print";
+import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 
 const ContributionsDetails = () => {
@@ -11,10 +12,11 @@ const ContributionsDetails = () => {
         content: "Contribution type",
         key: "name",
         align: "left",
-        height: "32px",
+        height: "40px",
       },
     ],
   };
+  const navigate = useNavigate();
 
 
   const tableDataScrollerHeader = {
@@ -24,6 +26,7 @@ const ContributionsDetails = () => {
         key: "name",
         align: "left",
         width: "16.66%",
+        height: "40px",
       },
       {
         content: <div className="table-header-blue">Last Contribution Amount</div>,
@@ -370,7 +373,7 @@ const ContributionsDetails = () => {
       </div>
 
       <div className="contributions-details-button-container">
-        <Button variant="primary">Change contributions</Button>
+        <Button onClick={() => navigate("/change-contributions")}>Change contributions</Button>
       </div>
     </div>
   );

@@ -1,0 +1,33 @@
+.cg-toggle-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .cg-toggle-switch-item {
+        width: 30px;
+        padding: 4px;
+        border: 1px solid var(--neutrals-gray-darkest);
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        background-color: #00294B;
+        color: var(--neutrals-white);
+        cursor: pointer;
+        
+        &:first-child {
+          border-radius: 24px 0 0 24px;  
+          border-right: none;
+
+         
+        }
+        &:last-child {
+          border-radius: 0 24px 24px 0;  
+          border-left: none;
+        }
+
+        &.active {
+            color: #009cdc;
+            border-width: 2px;
+        }
+    }
+}

@@ -19,7 +19,7 @@ const Results = () => {
       title: {
         text: '<strong>Rate of Return Time Frame</strong>'
       },
-        categories: ["Year to Date", "RTM"]
+        categories: ["YTD", "1 YEAR"]
     },
     plotOptions: {
       column: {
@@ -38,13 +38,13 @@ const Results = () => {
         },
         labels: {
           formatter: function () {
-            return this.axis.defaultLabelFormatter.call(this);
+            return this.axis.defaultLabelFormatter.call(this) + '%';
           }
       },
     },
     series: [{
         name: '',
-        data: [0, 2.26],
+        data: [7.3, 10.12],
         color: 'rgb(0, 41, 75)',
     }],
     tooltip: {
@@ -52,7 +52,7 @@ const Results = () => {
      formatter: function() {
       return `<b>${this.x}</b>
               <br/>
-              <b>${this.x === 'Year to Date' ? '01/01/2025 - 06/10/2025' : '06/01/2024 - 05/31/2025'}</b>
+              <b>${this.x === 'Year to Date' ? '06/10/2025 - 08/31/2025' : '09/30/2024 - 08/31/2025'}</b>
               <br/>
               <b>${Highcharts.numberFormat(this.y, 2)}%</b>`;
     }
@@ -66,12 +66,12 @@ const Results = () => {
       <div className="portfolio-results-content">
         <div className="portfolio-results-totals">
           <div className="portfolio-results-total">
-            <div className="portfolio-results-total-label">Year to date performance<br/>01/01/2025 - 06/10/2025</div>
-            <div className="portfolio-results-total-value">$0.00%</div>
+            <div className="portfolio-results-total-label">Year-to-date (YTD)<br/>06/10/2025 - 08/31/2025</div>
+            <div className="portfolio-results-total-value">$7.3%</div>
           </div>
           <div className="portfolio-results-total">
-            <div className="portfolio-results-total-label">Running-12-month performance<br/>06/01/2024 - 05/31/2025</div>
-            <div className="portfolio-results-total-value">$2.26%</div>
+            <div className="portfolio-results-total-label">1 Year total<br/>09/30/2024 - 08/31/2025</div>
+            <div className="portfolio-results-total-value">$10.12%</div>
           </div>
         </div>
         <div className="portfolio-results-tabs">

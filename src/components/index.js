@@ -13,6 +13,9 @@ import DotMenu from "./DotMenu";
 import InfoDialog from "./InfoDialog";
 import Slider from "./Slider";
 import InfoTooltip from "./InfoTooltip";
+import RoundButton from "./RoundButton";
+import InputSelect from "./InputSelect";
+import ToggleSwitch from "./ToggleSwitch";
 
 export {
   InfoBanner,
@@ -30,4 +33,7 @@ export {
   DotMenu,
   Slider,
   InfoTooltip,
+  RoundButton,
+  InputSelect,
+  ToggleSwitch,
 };

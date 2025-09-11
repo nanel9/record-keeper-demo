@@ -7,7 +7,18 @@ const Table = (props) => {
     <div className="cg-table">
       {data.title && (
       <div className="table-header">
-        <div className="table-title">{data.title}</div>
+        <div className="table-title">
+          {data.title}
+        </div>
+        {data.widgets && (
+            <div className="table-widgets">
+              {data.widgets.map((widget) => (
+                <div className="table-widget" key={widget.key}>
+                  {widget}
+                </div>
+              ))}
+            </div>
+          )}
       </div>
       )}
       <table>

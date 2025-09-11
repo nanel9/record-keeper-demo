@@ -1,0 +1,114 @@
+.saving-accounts-container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--neutrals-white);
+    padding: 30px 40px;
+
+    .saving-accounts-content {
+        max-width: 721px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .saving-accounts-title {
+        color: var(--primary-ocean-AA-compliant, #0074C2);
+        text-align: center;
+        font-size: 1.75rem;
+        letter-spacing: -0.24px;
+        font-weight: 400;
+        color: #005f9e;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .saving-accounts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;   
+    }
+
+    .saving-account-title {
+        display: flex;
+        padding: 8px 0;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+        border-bottom: 1px solid #005F9E;
+        color: #000;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .saving-account-list-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+    }
+
+    .saving-account-item {
+        display: flex;
+        padding: 24px;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;   
+        background: #EBF3F7;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0;
+    }
+
+    .saving-account-item-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+    }
+
+    .saving-account-item-delete {
+        background-color: 0074C2;
+        border-radius: 50%;
+        padding: 8px;
+    }
+
+    .saving-account-item-button {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+
+    
+
+    .saving-account-add-account {
+        .cg-button {
+            height: 36px;   
+        }
+    }
+
+    .saving-account-save-account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+
+        .cg-button {
+            padding: 8px 24px;
+        }
+    }
+    
+}

@@ -1,14 +1,18 @@
 .cg-button {
     margin-top: 1.5rem;
     height: calc(1.5em + 0.75rem + 2px);
-    font-size: 1rem;
-    line-height: 130%;
-    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
     padding: 0 10px;
     border-radius: 0;
-    font-family: "Roboto";
+    font-family: "AvenirNext";
     border: 2px solid #005f9e;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
     &:disabled {
         cursor: not-allowed;
