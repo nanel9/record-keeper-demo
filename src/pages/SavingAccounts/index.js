@@ -13,10 +13,6 @@ const SavingAccounts = () => {
     const [manualAccounts, setManualAccounts] = useState(Object.assign([], savingAccounts.filter((account) => account.isKnownAccount === false)));
     const knownAccounts = Object.assign([], savingAccounts.filter((account) => account.isKnownAccount === true));
 
-    const setValue = (value) => {
-        console.log(value);
-    };
-
     const handleAddAccount = () => {
         setManualAccounts([...manualAccounts, {
             name: "Other",
@@ -68,9 +64,9 @@ const SavingAccounts = () => {
                                 {manualAccounts.map((account, index) => (
                                         <div className="saving-account-item" key={index}>
                                             <div className="saving-account-item-form">
-                                                <InputSelect options={accountTypeOptions} value={account.type} label="Account Type" name="accountType" setValue={setValue}/>
-                                                <InputText label="Account Name" name="accountName" value={account.name} />
-                                                <InputText align="right" label="Balance" prefix="$" name="accountBalance" value={account.balance} />
+                                                <InputSelect options={accountTypeOptions} value={account.type} label="Account Type" name="accountType" />
+                                                <InputText label="Account Name" name="accountName" initialValue={account.name} />
+                                                <InputText align="right" label="Balance" prefix="$" name="accountBalance" initialValue={account.balance} />
                                             <div className="saving-account-item-button">
                                                 <RoundButton icon={<DeleteForeverIcon sx={{ width: "24px", height: "24px", color: "#fff" }} />} onClick={() => handleDeleteAccount(index)}/>
                                             </div>

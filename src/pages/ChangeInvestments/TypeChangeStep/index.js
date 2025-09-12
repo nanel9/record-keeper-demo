@@ -19,9 +19,9 @@ const TypeChangeStep = () => {
     if(type === "Exchange") {
       dispatch(setActiveStep({ value: 1 }));
     } else if(type === "Rebalance") {
-      dispatch(setActiveStep({ value: 1 }));
+      dispatch(setActiveStep({ value: 4 }));
     } else if(type === "Future investment elections") {
-      dispatch(setActiveStep({ value: 1 }));
+      dispatch(setActiveStep({ value: 7 }));
     }   
     dispatch(setSubTitle({ value: type }));
   };

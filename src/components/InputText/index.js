@@ -19,6 +19,7 @@ const InputText = (props) => {
     mask = {},
     onChangeExternal,
     value,
+    initialValue,
     prefix,
     suffix,
     setValue,
@@ -29,9 +30,13 @@ const InputText = (props) => {
   const [isEmpty, setIsEmpty] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
 
+  const [internalValue, setInternalValue] = useState(initialValue);
+
   const validateRequired = (event) => {
     if(setValue) {
         setValue(event.target.value);
+    } else {
+        setInternalValue(event.target.value);
     }
     setIsPristine(false);
 
@@ -67,7 +72,7 @@ const InputText = (props) => {
               name={name}
               placeholder={placeholder}
               ref={mask.mask ? inputRef : null}
-              value={value}
+              value={value ? value : internalValue}
               inputmode={inputmode}
             />
           <span

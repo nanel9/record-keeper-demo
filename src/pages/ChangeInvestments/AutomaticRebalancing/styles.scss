@@ -1,0 +1,23 @@
+.automatic-rebalancing-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 38px 80px 12px 80px;
+
+  .automatic-rebalancing-body-question {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .input-content {
+    width: 50% !important;
+  }
+
+  .cg-input-date-picker .input-container {
+    width: 50% !important;
+  }
+}

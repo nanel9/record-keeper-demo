@@ -16,6 +16,7 @@ import InfoTooltip from "./InfoTooltip";
 import RoundButton from "./RoundButton";
 import InputSelect from "./InputSelect";
 import ToggleSwitch from "./ToggleSwitch";
+import SuccessDialog from "./SuccessDialog";
 
 export {
   InfoBanner,
@@ -36,4 +37,5 @@ export {
   RoundButton,
   InputSelect,
   ToggleSwitch,
+  SuccessDialog,
 };

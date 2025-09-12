@@ -1,0 +1,49 @@
+.future-investment-step-2-container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--neutrals-white);
+    padding: 30px 40px;
+
+    .future-investment-step-2-info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .cg-info-banner {
+            width: 309px;   
+        }
+    }
+
+    .future-investment-step-2-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .future-investment-step-2-header-step {
+        color: #6F6F6F;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0;
+    }
+
+    .future-investment-step-2-header-title {
+        color: #005F9E;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0;
+    }
+
+    .future-investment-step-2-body {
+        display: flex;
+        flex-direction: column;
+    }
+}

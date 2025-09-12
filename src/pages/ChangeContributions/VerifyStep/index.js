@@ -2,13 +2,25 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setActiveStep } from "../../../state/wizard/wizardSlice";
-import { Button, InfoBanner } from "../../../components";
+import { Button, InfoBanner, SuccessDialog } from "../../../components";
 import EditIcon from "@mui/icons-material/Edit";
 import "./styles.scss";
 
 const VerifyStep = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [openSuccessDialog, setOpenSuccessDialog] = React.useState(false);
+
+  const handleSubmit = () => {
+    setOpenSuccessDialog(true);
+  };
+
+  const handleReturnToMyPortfolio = () => {
+    setOpenSuccessDialog(false);
+    navigate("/contributions");
+  };
+
+  
   return (
     <>
       <InfoBanner>
@@ -66,11 +78,19 @@ const VerifyStep = () => {
             <Button
               color="primary"
               size="small"
-              onClick={() => navigate("/contributions")}
+              onClick={handleSubmit}
             >
               Submit
             </Button>
           </div>
+
+          <SuccessDialog
+            open={openSuccessDialog}
+            onClose={handleReturnToMyPortfolio}
+            title="Success"
+            content={`Your changes have been submitted. Confirmation #: ${Math.floor(Math.random() * 90000000 + 10000000)}`}
+            textButton="Return to My Contributions"
+          />
         </div>
       </div>
     </>

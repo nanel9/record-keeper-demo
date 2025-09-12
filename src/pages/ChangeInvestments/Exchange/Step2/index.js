@@ -1,97 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setActiveStep } from "../../../../state/wizard/wizardSlice";
-import { Button, InfoBanner, Table, InputText, DotMenu } from "../../../../components";
+import { Button, InfoBanner } from "../../../../components";
+import InvestmentsTable from "../../InvestmentsTable";
 import "./styles.scss";
 
 const InvestmentExchangeStep2 = () => {
 
   const dispatch = useDispatch();
-
-  const options = [
-    {
-      content: "Fund details",
-      key: "option1",
-      url: "https://www.capitalgroup.com/retirement/participant/servlet/FundLink?fundId=0002259&type=details",
-    },
-    {
-      content: "Prospectus",
-      key: "option2",
-      url: "https://www.capitalgroup.com/retirement/participant/servlet/FundLink?fundId=0002259&cusip=999998255&type=prospectus",
-    },
-  ];
-
-  const dataTable = {
-    headers: [
-      {
-        content: "Name",
-        key: "name",
-        align: "left",
-      },
-      {
-        content: "Docs",
-        key: "docs",
-        align: "center",
-      },
-      {
-        content: "Asset Class",
-        key: "assetClass",
-        align: "left",
-      },
-      {
-        content: "Current Balance",
-        key: "currentBalance",
-        align: "right",
-      },
-      {
-        content: "Current Units",
-        key: "currentUnits",
-        align: "right",
-      },
-      {
-        content: "Amount to Exchange",
-        key: "amountToExchange",
-        align: "right",
-        width: "100px",
-      },
-    ],
-    rows: [
-        {
-            columns: [
-                {
-                    content: "Af U.S Government Money Market-R2",
-                    key: "name",
-                    align: "left",
-                },
-                {
-                    content: <DotMenu options={options} />,
-                    key: "docs",
-                    align: "center",
-                },
-                {
-                    content: "Growth",
-                    key: "assetClass",
-                    align: "left",
-                },
-                {
-                    content: "$41,035.30",
-                    key: "currentBalance",
-                    align: "right",
-                },
-                {
-                    content: "41,035.300",
-                    key: "currentUnits",
-                    align: "right",
-                },
-                {
-                    content: <InputText label="" type="number" prefix="$" value={"100%"} setValue={() => {}} />,
-                    key: "amountToExchange",
-                    align: "right",
-                },
-            ]
-        }
-    ]
-  }
 
   return (
     <div className="investment-exchange-step-2-container">
@@ -103,6 +19,13 @@ const InvestmentExchangeStep2 = () => {
         </InfoBanner>
       </div>
 
+      <InfoBanner noBackGround>
+        These changes will only affect your existing investments. <strong>They will not affect how your future contributions are allocated.</strong> To change your future contributions, return to the Change Investments page and select Future Investment Elections.
+        <br />
+        <br />
+        Prior to making an election, you should review your participant fee disclosure, which contains important information about the investment options offered under your retirement plan, including investment returns, fees and expenses.
+      </InfoBanner>
+
       <div className="investment-exchange-step-2-header">
         <div className="investment-exchange-step-2-header-step">
           STEP 2 OF 3
@@ -113,7 +36,7 @@ const InvestmentExchangeStep2 = () => {
       </div>
 
       <div className="investment-exchange-step-2-body">
-        <Table data={dataTable} />
+        <InvestmentsTable />
       </div>
 
       <div className="wizard-footer">

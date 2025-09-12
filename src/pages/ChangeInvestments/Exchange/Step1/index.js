@@ -7,7 +7,7 @@ import {
   InputSelect,
   InputText,
 } from "../../../../components";
-import "./styles.css";
+import "./styles.scss";
 
 const InvestmentExchangeStep1 = () => {
   const dispatch = useDispatch();

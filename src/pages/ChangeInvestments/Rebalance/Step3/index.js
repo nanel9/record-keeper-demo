@@ -6,7 +6,7 @@ import { setActiveStep } from "../../../../state/wizard/wizardSlice";
 import EditIcon from "@mui/icons-material/Edit";
 import "./styles.scss";
 
-const InvestmentExchangeStep3 = () => {
+const InvestmentRebalanceStep3 = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [openSuccessDialog, setOpenSuccessDialog] = React.useState(false);
@@ -42,7 +42,21 @@ const InvestmentExchangeStep3 = () => {
             align: "left",
           },
           {
-            content: "$5,000",
+            content: "90%",
+            key: "amount",
+            align: "right",
+          },
+        ],
+      },
+      {
+        columns: [
+          {
+            content: "Af Global Insight Fund-R2",
+            key: "investment",
+            align: "left",
+          },
+          {
+            content: "10%",
             key: "amount",
             align: "right",
           },
@@ -56,7 +70,7 @@ const InvestmentExchangeStep3 = () => {
         align: "left",
       },
       {
-        content: "$5,000",
+        content: "100%",
         key: "amount",
         align: "right",
       },
@@ -64,31 +78,31 @@ const InvestmentExchangeStep3 = () => {
   };
 
   return (
-    <div className="investment-exchange-step-3-container">
-      <div className="investment-exchange-step-3-header">
-        <div className="investment-exchange-step-3-header-step">
+    <div className="investment-rebalance-step-3-container">
+      <div className="investment-rebalance-step-3-header">
+        <div className="investment-rebalance-step-3-header-step">
           STEP 3 OF 3
         </div>
-        <div className="investment-exchange-step-3-header-title">
+        <div className="investment-rebalance-step-3-header-title">
           Verify your changes
         </div>
       </div>
 
-      <div className="investment-exchange-step-3-body">
+      <div className="investment-rebalance-step-3-body">
         <InfoBanner>
           Any vested balances and percentages shown are based on information
           provided to Capital Group and may not reflect the most current data.
           Please check with your employer for the most recent information.
         </InfoBanner>
 
-        <div className="investment-exchange-step-3-table-container">
+        <div className="investment-rebalance-step-3-table-container">
           <div className="changes-verify-item">
             <div className="changes-verify-item-title big">My investments</div>
             <div className="changes-verify-item-value">
               <Button
                 size="small"
                 onClick={() => {
-                  dispatch(setActiveStep({ value: 2 }));
+                  dispatch(setActiveStep({ value: 5 }));
                 }}
               >
                 <EditIcon sx={{ width: "20px", height: "20px" }} />
@@ -98,33 +112,27 @@ const InvestmentExchangeStep3 = () => {
           </div>
           <div className="changes-verify-item">
             <div className="changes-verify-item-title">Action</div>
-            <div className="changes-verify-item-value">Exchange</div>
+            <div className="changes-verify-item-value">Rebalancing</div>
           </div>
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title">Process Date</div>
-            <div className="changes-verify-item-value">
-              {new Date().toLocaleDateString()}
-            </div>
+            <div className="changes-verify-item-title">Affects</div>
+            <div className="changes-verify-item-value">Current balances</div>
           </div>
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title">
-              Investment To Exchange
-            </div>
-            <div className="changes-verify-item-value">
-              Af U.S. Government Money Market-R2
-            </div>
+            <div className="changes-verify-item-title">Auto Rebalancing</div>
+            <div className="changes-verify-item-value">Quarterly</div>
           </div>
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title">Amount To Exchange</div>
-            <div className="changes-verify-item-value">$5,000</div>
+            <div className="changes-verify-item-title">Rebalance Date</div>
+            <div className="changes-verify-item-value">09/26/2025</div>
           </div>
         </div>
 
-        <div className="investment-exchange-step-3-resume-container">
-          <div className="investment-exchange-step-3-resume-title">
+        <div className="investment-rebalance-step-3-resume-container">
+          <div className="investment-rebalance-step-3-resume-title">
             You are exchanging funds to the following investments:
           </div>
-          <div className="investment-exchange-step-3-resume-table-container">
+          <div className="investment-rebalance-step-3-resume-table-container">
             <Table data={dataTable} />
           </div>
         </div>
@@ -134,7 +142,7 @@ const InvestmentExchangeStep3 = () => {
         <Button
           color="secondary"
           size="small"
-          onClick={() => dispatch(setActiveStep({ value: 2 }))}
+          onClick={() => dispatch(setActiveStep({ value: 5 }))}
         >
           Back
         </Button>
@@ -154,4 +162,4 @@ const InvestmentExchangeStep3 = () => {
   );
 };
 
-export default InvestmentExchangeStep3;
+export default InvestmentRebalanceStep3;
