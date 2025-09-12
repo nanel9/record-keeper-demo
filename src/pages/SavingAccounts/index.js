@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { InputText, Wizard, RoundButton, Button, InputSelect } from "../../components";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import savingAccounts from "../../store/SavingAccounts.js";
-import { useNavigate } from "react-router-dom";
 import "./styles.scss"; 
+
 
 const SavingAccounts = () => {
     const navigate = useNavigate();
+    const savingAccounts = useSelector((state) => state.savingAccounts);
     const [manualAccounts, setManualAccounts] = useState(Object.assign([], savingAccounts.filter((account) => account.isKnownAccount === false)));
     const knownAccounts = Object.assign([], savingAccounts.filter((account) => account.isKnownAccount === true));
 

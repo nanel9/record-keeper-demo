@@ -9,7 +9,7 @@ const takeActionItems = [
   },
   {
     title: "Manage investments",
-    href: "#",
+    href: "/#/my-portfolio",
   },
   {
     title: "Manage beneficiaries",

@@ -39,7 +39,7 @@ const GoalsCalculatorForm = () => {
       <div className="goals-calculator-form-subtitle">
         Your current age is <strong>{currentAge}</strong>
       </div>
-      <form className="goals-calculator-form-content">
+      <div className="goals-calculator-form-content">
         <div className="goals-calculator-form-content-item ">
           <div className="goals-calculator-form-content-item-label">
             <strong>
@@ -292,7 +292,7 @@ const GoalsCalculatorForm = () => {
             Recalculate
           </Button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

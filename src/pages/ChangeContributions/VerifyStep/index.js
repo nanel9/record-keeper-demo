@@ -1,9 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setActiveStep } from "../../../state/wizard/wizardSlice";
 import { Button, InfoBanner } from "../../../components";
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from "@mui/icons-material/Edit";
 import "./styles.scss";
 
 const VerifyStep = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <>
       <InfoBanner>
@@ -19,25 +24,52 @@ const VerifyStep = () => {
 
         <div className="changes-verify-table-container">
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title big">My contributions</div>
+            <div className="changes-verify-item-title big">
+              My contributions
+            </div>
             <div className="changes-verify-item-value">
-              <Button size="small">
-                <EditIcon sx={{ width: '20px', height: '20px' }} />
+              <Button size="small" onClick={() => {dispatch(setActiveStep({value: 0}))}}>
+                <EditIcon sx={{ width: "20px", height: "20px" }} />
                 Add/update
               </Button>
             </div>
           </div>
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title">Pre-Tax Contribution Amount</div>
+            <div className="changes-verify-item-title">
+              Pre-Tax Contribution Amount
+            </div>
             <div className="changes-verify-item-value">$22,000</div>
           </div>
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title">Roth Contribution Amount</div>
+            <div className="changes-verify-item-title">
+              Roth Contribution Amount
+            </div>
             <div className="changes-verify-item-value">$100.00</div>
           </div>
           <div className="changes-verify-item">
-            <div className="changes-verify-item-title">Post-Tax Contribution Amount</div>
+            <div className="changes-verify-item-title">
+              Post-Tax Contribution Amount
+            </div>
             <div className="changes-verify-item-value">$5,000</div>
+          </div>
+          
+          <div className="wizard-footer">
+            <Button
+              color="secondary"
+              size="small"
+              onClick={() => {
+                dispatch(setActiveStep({ value: 0 }));
+              }}
+            >
+              Back
+            </Button>
+            <Button
+              color="primary"
+              size="small"
+              onClick={() => navigate("/contributions")}
+            >
+              Submit
+            </Button>
           </div>
         </div>
       </div>

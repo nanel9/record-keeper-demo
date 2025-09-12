@@ -41,7 +41,7 @@ const InputSelect = (props) => {
   };
 
   return (
-    <div className="cg-input-text">
+    <div className="cg-input-select">
       {label && <label htmlFor={name}>{label}</label>}
 
       <div className="input-container">

@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Table, Button, DotMenu } from "../../../components";
 import "./styles.scss";
 
-
 const ResultsTable = () => {
+
+    const navigate = useNavigate();
 
     const options1 = [
         {
@@ -119,7 +121,7 @@ const ResultsTable = () => {
             <Table data={tableData}/>
 
             <div className="portfolio-results-table-button-container">
-                <Button variant="primary">Change investments</Button>
+                <Button onClick={() => navigate("/change-investments")}>Change investments</Button>
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-.cg-input-text {
+.cg-input-select {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -40,7 +40,7 @@
     width: 100% !important;
     border: 1px solid var(--neutrals-gray-darkest) !important;
 
-    &:has(select:focus) {
+    &:has(input:focus) {
       outline: none !important;
       box-shadow: 0 0 2px .25rem rgba(68,213,229,.5) !important;
     }

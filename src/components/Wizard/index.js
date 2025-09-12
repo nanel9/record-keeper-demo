@@ -1,5 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState, Children } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { reset } from "../../state/wizard/wizardSlice";
 import Slide from "@mui/material/Slide";
 import Dialog from "@mui/material/Dialog";
 import Button from "../Button";
@@ -7,33 +10,17 @@ import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 import classNames from "classnames";
 
-
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
-const WizardFooter = (props) => {
-  const { activeStep, handleBack, handleNext } = props;
-  return (
-    <div className="wizard-footer">
-    {activeStep > 0 && (
-      <Button color="secondary" size="small" onClick={handleBack}>
-        Back
-      </Button>
-    )}
-    <Button color="primary" size="small" onClick={handleNext}>
-      Next
-    </Button>
-  </div>
-  );
-};
-
 const Wizard = (props) => {
-  const { children, title, urlReturn, noSteps = false } = props;
+  const { children, title, urlReturn } = props;
   const [openDialog, setOpenDialog] = useState(false);
-  const [activeStep, setActiveStep] = useState(0);
   const navigate = useNavigate();
+  const activeStep = useSelector((state) => state.wizard.activeStep);
+  const subTitle = useSelector((state) => state.wizard.subTitle);
+  const dispatch = useDispatch();
 
   const handleCloseDialog = (event, reason) => {
     if (reason === "backdropClick") return;
@@ -49,18 +36,11 @@ const Wizard = (props) => {
     navigate(urlReturn);
   };
 
-  const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
   useEffect(() => {
     document.getElementById("cg-bottom-bar").style.display = "none";
 
     return () => {
+      dispatch(reset());
       document.getElementById("cg-bottom-bar").style.display = "block";
     };
   }, []);
@@ -71,7 +51,12 @@ const Wizard = (props) => {
         <div className="wizard-header-container">
           <div className="wizard-header">
             <div className="wizard-space"></div>
-            <div className="wizard-title">{title}</div>
+            <div className="wizard-title">
+              {title}
+              {subTitle && (
+                <div className="wizard-sub-title">{subTitle}</div>
+              )}
+            </div>
             <div className="wizard-close">
               <a onClick={handleOpenDialog}>Cancel</a>
             </div>
@@ -84,7 +69,6 @@ const Wizard = (props) => {
             })}
           </div>
         </div>
-        {!noSteps && <WizardFooter activeStep={activeStep} handleBack={handleBack} handleNext={handleNext} />}
       </div>
 
       <Dialog

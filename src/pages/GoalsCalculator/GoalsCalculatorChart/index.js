@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Tabs, Table, Button } from "../../../components";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import EditIcon from "@mui/icons-material/Edit";
 import { getMonthlyIncome, getTotalAssetsData } from "../../../utils/goals";
-import savingAccounts from "../../../store/SavingAccounts";
 import "./styles.scss";
 
 const GoalsCalculatorChart = () => {
@@ -15,6 +15,7 @@ const GoalsCalculatorChart = () => {
   const [chartSecondLegend, setChartSecondLegend] = useState("");
   const chartRef = useRef(null);
   const navigate = useNavigate();
+  const savingAccounts = useSelector((state) => state.savingAccounts);
 
   const getValues = (tab) => {
     if (tab === "M") {

@@ -1,24 +1,22 @@
 import React, { useState } from "react";      
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveMenuId } from "../../../state/nav/navSlice";
 import classNames from "classnames";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { navitems } from "./nav";
 import "./styles.scss";
-
-
-const getMainMenu = (hash) => {
-    return navitems.find(item => item.url === hash);
-}
 
 const MainNav = () => {
 
     const [isOpened, setIsOpened] = useState(false);
     const [menuId, setMenuId] = useState(null);
     const [secondaryMenu, setSecondaryMenu] = useState([]);
-    const currentHash = window.location.hash;
-    const currentMenu = getMainMenu(currentHash);
+    const dispatch = useDispatch();
+    const activeMenuId = useSelector((state) => state.nav.activeMenuId);
 
 
-    const closeSecondaryMenu = () => {
+    const closeSecondaryMenu = (id) => {
+        dispatch(setActiveMenuId({id: id}));
         setIsOpened(false);
     }
 
@@ -43,7 +41,7 @@ const MainNav = () => {
                 {navitems.map((item, index) => (
                     <div key={index} >  
                         {item.children ? (
-                            <div key={index} className={classNames("nav-menu", {opened: isOpened && menuId === item?.id, active: currentMenu?.id === item?.id})}  onClick={() => opensSecondaryMenu(item)}>
+                            <div key={index} className={classNames("nav-menu", {opened: isOpened && menuId === item?.id, active: activeMenuId === item?.id})}  onClick={() => opensSecondaryMenu(item)}>
                                 {item.title}
                                 {item.children && (
                                     <span className="nav-menu-icon">
@@ -52,8 +50,8 @@ const MainNav = () => {
                                 )}
                             </div>
                         ) : (
-                            <div key={index} className={classNames("nav-menu", {active: currentMenu?.id === item?.id})}>
-                                <a href={item.url}>{item.title}</a>
+                            <div key={index} className={classNames("nav-menu", {active: activeMenuId === item?.id})}>
+                                <a href={item.url} onClick={() => dispatch(setActiveMenuId({id: item.id}))}>{item.title}</a>
                             </div>
                         )}
                     </div>
@@ -72,7 +70,7 @@ const MainNav = () => {
                 {secondaryMenu.map((item, index) => (
                     <div className="secondary-nav-menu-item" key={index}>
                         {item.title && (
-                            <a href={item.url} onClick={() => closeSecondaryMenu()}>
+                            <a href={item.url} onClick={() => closeSecondaryMenu(item.id)}>
                                 {item.icon}
                                 {item.title}
                             </a>

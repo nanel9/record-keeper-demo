@@ -24,6 +24,7 @@
       margin-left: auto;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     .wizard-space {
@@ -33,6 +34,16 @@
     .wizard-title {
       flex: 1 1; 
       font-weight: 600;
+    }
+
+    .wizard-sub-title {
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0; 
     }
 
     .wizard-close {
@@ -46,19 +57,6 @@
       max-width: 1140px;
       margin-right: auto;
       margin-left: auto;
-    }
-    .wizard-footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      margin: 40px 0 20px 0;
-
-      button {
-       width: 150px;
-      }
     }
 
     .wizard-step {
@@ -116,5 +114,19 @@
   button {
     margin: 0 4px 4px 4px;
     height: 45px !important;
+  }
+}
+
+.wizard-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 40px 0 20px 0;
+
+  button {
+   width: 150px !important;
   }
 }

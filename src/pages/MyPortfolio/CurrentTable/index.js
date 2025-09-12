@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Table, Button, DotMenu } from "../../../components";
 import "./styles.scss";
 
 const CurrentTable = () => {
+
+    const navigate = useNavigate();
 
     const options1 = [
         {
@@ -157,7 +160,7 @@ const CurrentTable = () => {
             <Table data={tableData}/>
 
             <div className="portfolio-current-table-button-container">
-                <Button variant="primary">Change investments</Button>
+                <Button onClick={() => navigate("/change-investments")}>Change investments</Button>
             </div>
         </div>
     );

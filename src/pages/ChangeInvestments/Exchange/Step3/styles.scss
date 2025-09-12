@@ -1,35 +1,42 @@
-.changes-verify-container {
+.investment-exchange-step-3-container {
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--neutrals-white);
     padding: 30px 40px;
 
-    .changes-verify-header {
+    .investment-exchange-step-3-header {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 8px;
+        margin-top: 16px;
     }
 
-    .changes-verify-header-step {
+    .investment-exchange-step-3-header-step {
         color: #6F6F6F;
         text-align: center;
-        font-size: 24px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 32px;
         letter-spacing: 0;
     }
 
-    .changes-verify-header-title {
+    .investment-exchange-step-3-header-title {
         color: #005F9E;
         text-align: center;
         font-size: 24px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 32px;
         letter-spacing: 0;
     }
+
+
+    .investment-exchange-step-3-body {
+        display: flex;
+        flex-direction: column;
+    }   
 
     .changes-verify-table-container {
         display: flex;
@@ -46,7 +53,7 @@
     }
 
     .changes-verify-item {
-        padding: 16px;
+        padding: 16px 0;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -82,5 +89,48 @@
     .cg-button:not(.wizard-footer button) {
         padding: 8px 24px;
         height: 30px;
+    }
+
+    .investment-exchange-step-3-resume-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;   
+        gap: 24px;
+    }
+
+    .investment-exchange-step-3-resume-title {
+        display: flex;
+        width: 100%;
+        padding: 30px 0 ;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1 0 0;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0;
+    }
+
+    .investment-exchange-step-3-resume-table-container {
+        width: 807px;
+    }
+
+    table {
+        border: 1px solid #ccc !important;
+    }
+
+    thead tr {
+        border-bottom: none !important;   
+    }
+
+    tbody tr {
+        border-bottom: none !important;   
+    }
+
+    tfoot tr {
+        border-top: none !important;   
     }
 }

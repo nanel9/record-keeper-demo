@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
-import { InfoBanner, InfoDialog, Table, InputText, ToggleSwitch } from '../../../components';
+import { useDispatch } from 'react-redux';
+import { setActiveStep } from '../../../state/wizard/wizardSlice';
+import { InfoBanner, InfoDialog, Table, InputText, ToggleSwitch, Button } from '../../../components';
 import InfoIcon from '@mui/icons-material/Info';
 import "./styles.scss";
-
 
 const ChangesStep = () => {
     const [openMatchingDialog, setOpenMatchingDialog] = React.useState(false);
@@ -20,6 +21,8 @@ const ChangesStep = () => {
 
     const [totalPreTaxContributions, setTotalPreTaxContributions] = React.useState("0.00");
     const [totalPostTaxContributions, setTotalPostTaxContributions] = React.useState("0.00");
+
+    const dispatch = useDispatch();
 
     const changePreTaxToogle = (value) => {
         if (value === 0) {
@@ -41,8 +44,14 @@ const ChangesStep = () => {
     useEffect(() => {
         const parsedPreTaxContributions = parseFloat(preTaxContributions || "0.00");
         const parsedRothContributions = parseFloat(rothContributions || "0.00");
-        setTotalPreTaxContributions(parsedPreTaxContributions + parsedRothContributions);
-    }, [preTaxContributions, rothContributions]);
+        const total = parsedPreTaxContributions + parsedRothContributions;
+
+        if (preTaxType === "$") {
+            setTotalPreTaxContributions(Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(total));
+        } else {
+            setTotalPreTaxContributions(total);
+        }
+    }, [preTaxContributions, rothContributions, preTaxType]);
 
 
     useEffect(() => {
@@ -149,16 +158,23 @@ const ChangesStep = () => {
                 <Table data={preTaxTableData} />            
                 <div className="changes-contributions-table-footer">
                     <div className="changes-contributions-table-footer-text">Total amount:</div>
-                    <div className="changes-contributions-table-footer-amount">{preTaxType === "$" ? "$" : null}{totalPreTaxContributions}{preTaxType === "%" ? "%" : null}</div>
+                    <div className="changes-contributions-table-footer-amount">{totalPreTaxContributions}{preTaxType === "%" ? "%" : null}</div>
                 </div>
             </div>
             <div className="changes-contributions-table-container">
                 <Table data={postTaxTableData} />            
                 <div className="changes-contributions-table-footer">
                     <div className="changes-contributions-table-footer-text">Total amount:</div>
-                    <div className="changes-contributions-table-footer-amount">{postTaxType === "$" ? "$" : null}{totalPostTaxContributions}{postTaxType === "%" ? "%" : null}</div>
+                    <div className="changes-contributions-table-footer-amount">{totalPostTaxContributions}{postTaxType === "%" ? "%" : null}</div>
                 </div>
             </div>
+          
+            <div className="wizard-footer">
+                <Button color="primary" size="small" onClick={() => {dispatch(setActiveStep({value: 1}))}}>
+                Next
+                </Button>
+            </div>
+
         </div>
     </div>
     <InfoDialog open={openMatchingDialog} onClose={() => setOpenMatchingDialog(false)} title="View Matching Calculations" content="Hello" />

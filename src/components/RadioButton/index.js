@@ -6,8 +6,8 @@ const RadioButton = (props) => {
     const {label, name, value, setValue = () => {}, checked } = props;
     
     return (
-        <label className="cg-radio-container">
-            <input type="radio" name={name} value={value} onChange={(event) => setValue(event.target.value)} checked={checked}/>
+        <label className="cg-radio-container" onClick={(event) => setValue(event.target.value)}>
+            <input type="radio" name={name} value={value} checked={checked}/>
             <span className="custom-radio"></span>
             {label}
         </label>

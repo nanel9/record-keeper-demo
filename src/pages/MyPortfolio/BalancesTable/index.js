@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Table, Button, DotMenu } from "../../../components";
 import SouthIcon from "@mui/icons-material/South";
 import NorthIcon from "@mui/icons-material/North";
 import "./styles.scss";
 
 const BalancesTable = () => {
+  const navigate = useNavigate();
   const options1 = [
     {
       content: "Fund details",
@@ -237,7 +239,7 @@ const BalancesTable = () => {
       <Table data={tableData} />
 
       <div className="portfolio-current-table-button-container">
-        <Button variant="primary">Change investments</Button>
+        <Button onClick={() => navigate("/change-investments")}>Change investments</Button>
       </div>
 
       <div className="portfolio-current-table-footer">

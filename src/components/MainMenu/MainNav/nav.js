@@ -24,32 +24,38 @@ export const navitems = [
             {
                 title: "My portfolio",
                 icon: <PieChartIcon sx={{ width: 24, height: 24 }} />,
-                url: "#/my-portfolio"
+                url: "#/my-portfolio",
+                id: "my-account"
             },
             {
                 title: "Contributions",
                 icon: <AttachMoneyIcon sx={{ width: 24, height: 24 }} />,
-                url: "#/contributions"
+                url: "#/contributions",
+                id: "my-account"
             },
             {
                 title: "Loans & withdrawals",
                 icon: <PaymentsIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "my-account"
             },
             {
                 title: "Account activity & statements",
                 icon: <DescriptionIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "my-account"
             },
             {
                 title: "Plan information",
                 icon: <InfoIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "my-account"
             },
             {
                 title: "Research investments",
                 icon: <SearchIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "my-account"
             }
         ]
     },
@@ -60,27 +66,32 @@ export const navitems = [
             {
                 title: "Personal information",
                 icon: <PersonIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "profile"
             },
             {
                 title: "Beneficiaries",
                 icon: <GroupIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "profile"
             },
             {
                 title: "eDelivery preferences",
                 icon: <EmailIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "profile"
             },
             {
                 title: "Login security",
                 icon: <LockIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "profile"
             },
             {
                 title: "Alerts",
                 icon: <NotificationsActiveIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "profile"
             }
         ]
     },
@@ -91,62 +102,74 @@ export const navitems = [
             {
                 title: "Manage contributions",
                 icon: <AttachMoneyIcon sx={{ width: 24, height: 24 }} />,
-                url: "#/contributions"
+                url: "#/contributions",
+                id: "quick-links"
             },
             {
                 title: "Request a withdrawal",
                 icon: <PaymentsIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "#",
+                id: "quick-links"
             },
             {
                 title: "View statements & account activity",
                 icon: <DescriptionIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },
             {
                 title: "Manage investments",
                 icon: <PieChartIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "#/my-portfolio",
+                id: "quick-links"
             },
             {
                 title: "Update communication preferences",
                 icon: <EmailIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },
             {
                 title: "View portfolio & investment results",
                 icon: <BarChartIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "#/my-portfolio",
+                id: "quick-links"
             },
             {
                 title: "Manage beneficiaries",
                 icon: <GroupIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },
             {
                 title: "Update contact information",
                 icon: <PersonIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },
             {
                 title: "Research investments",
                 icon: <SearchIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },
             {
                 title: "Request a loan",
                 icon: <AttachMoneyIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },      
             {
                 title: "",
                 icon: "",
-                url: ""
+                url: "",
+                id: "quick-links"
             },      
             {
                 title: "Request plan information",
                 icon: <InfoIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "quick-links"
             },
         ]
     },
@@ -157,7 +180,8 @@ export const navitems = [
             {
                 title: "Participant help center",
                 icon: <PersonIcon sx={{ width: 24, height: 24 }} />,
-                url: ""
+                url: "",
+                id: "additional-information"
             },
         ]
     }
