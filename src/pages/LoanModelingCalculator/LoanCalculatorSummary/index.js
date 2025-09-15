@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { resetCalculatorResult } from "../../../state/loanCalculator/loanCalculatorSlice";
 import LoanInfoBullets from "../../LoanRequest/LoanInfoBullets";
 import { setActiveStep } from "../../../state/wizard/wizardSlice";
 import { Button, InfoBanner } from "../../../components";
@@ -9,10 +10,18 @@ import "./styles.scss";
 const LoanCalculatorSummary = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const calculatorResult = useSelector((state) => state.loanCalculator.calculatorResults);
 
   const handleGoToLoanRequest = () => {
     navigate("/loan-request");
   };
+
+  useEffect(() => {
+    return () => {
+      dispatch(resetCalculatorResult());
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="loan-calculator-summary-container">
@@ -33,27 +42,27 @@ const LoanCalculatorSummary = () => {
             <div className="loan-calculator-summary-info-right">
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Loan type</div>
-                <div className="loan-calculator-summary-info-item-value">Personal</div>
+                <div className="loan-calculator-summary-info-item-value">{calculatorResult.loanType}</div>
               </div>
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Payment frequency</div>
-                <div className="loan-calculator-summary-info-item-value">Weekly</div>
+                <div className="loan-calculator-summary-info-item-value">{calculatorResult.paymentFrequency}</div>
               </div>
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Interest rate (APR)</div>
-                <div className="loan-calculator-summary-info-item-value">9.00% (53.89% APR)</div>
+                <div className="loan-calculator-summary-info-item-value">9.00% (10.46 APR)</div>
               </div>
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Loan amount</div>
-                <div className="loan-calculator-summary-info-item-value">$1,000.00</div>
+                <div className="loan-calculator-summary-info-item-value">{calculatorResult.loanAmount}</div>
               </div>
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Number of payments</div>
-                <div className="loan-calculator-summary-info-item-value">30</div>
+                <div className="loan-calculator-summary-info-item-value">{calculatorResult.numberOfPayments}</div>
               </div>
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Payment amount</div>
-                <div className="loan-calculator-summary-info-item-value">$34.24</div>
+                <div className="loan-calculator-summary-info-item-value">{calculatorResult.paymentAmount}</div>
               </div>
               <div className="loan-calculator-summary-info-item">
                 <div className="loan-calculator-summary-info-item-title">Origination fee</div>

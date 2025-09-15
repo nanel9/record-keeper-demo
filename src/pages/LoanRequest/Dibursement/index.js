@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import LoanInfoBullets from "../LoanInfoBullets";
 import { setActiveStep } from "../../../state/wizard/wizardSlice";
+import { setDeliveryFee } from "../../../state/loanCalculator/loanCalculatorSlice";
 import {
   Button,
   InfoBanner,
@@ -11,9 +12,8 @@ import {
   InputText,
   CheckBox,
 } from "../../../components";
-import { termsAndConditions } from "../termsAndCondtions";
+import { TermsAndConditions } from "../termsAndCondtions";
 import "./styles.scss";
-
 
 const Dibursement = () => {
   const dispatch = useDispatch();
@@ -24,8 +24,14 @@ const Dibursement = () => {
   const [dibursementAccountNumber, setDibursementAccountNumber] = useState();
   const [dibursementRoutingNumber, setDibursementRoutingNumber] = useState();
   const [dibursementNameOnAccount, setDibursementNameOnAccount] = useState();
-  const [dibursementCarrier, setDibursementCarrier] = useState();
+  const [dibursementCarrier, setDibursementCarrier] = useState('0');
   const [dibursementTerms, setDibursementTerms] = useState();
+
+  const handleDeliveryFee = (event) => {
+    dispatch(setDeliveryFee({ deliveryFee: event.target.value }));  
+  };
+
+  const isComplete = (dibursementAccountType === "ACH Deposit") ? (dibursementAccountInformation && dibursementAccountNumber && dibursementRoutingNumber && dibursementNameOnAccount && dibursementTerms) : true;
 
   return (
     <div className="dibursement-container">
@@ -96,18 +102,19 @@ const Dibursement = () => {
                     label="Carrier (FedEx is unable to deliver to P.O. Box addresses)"
                     options={[
                       {
-                        value: "US Postal Service Standard Delivery",
+                        value: "0",
                         label: "US Postal Service Standard Delivery: $0.00",
                       },
                       {
-                        value: "USPS Priority Mail",
+                        value: "25",
                         label: "UPS Priority Mail: $25.00",
                       },
                       {
-                        value: "FedEX Overnight Priority",
+                        value: "25",
                         label: "FedEX Overnight Priority: $25.00",
                       },
                     ]}
+                    onChangeExternal={handleDeliveryFee}
                     setValue={setDibursementCarrier}
                     value={dibursementCarrier}
                   />
@@ -184,7 +191,7 @@ const Dibursement = () => {
 
 
                   <div className="dibursement-form-terms-and-conditions">
-                    {termsAndConditions}
+                    <TermsAndConditions/>
                   </div>
 
                 </>
@@ -201,6 +208,7 @@ const Dibursement = () => {
               Back
             </Button>
             <Button
+              disabled={!isComplete}
               color="primary"
               size="small"
               onClick={() => dispatch(setActiveStep({ value: 2 }))}

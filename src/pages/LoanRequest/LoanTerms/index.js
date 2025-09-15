@@ -9,6 +9,11 @@ const LoanTerms = () => {
   const [phone, setPhone] = React.useState();
   const [email, setEmail] = React.useState();
   const [emailConfirm, setEmailConfirm] = React.useState();
+  const [isCalculated, setIsCalculated] = React.useState(false);
+
+  const onCalculate = () => {
+    setIsCalculated(true);
+  };
 
   const dispatch = useDispatch();
 
@@ -61,7 +66,7 @@ const LoanTerms = () => {
               documentation” link.
             </p>
           </div>
-          <LoanCalculator />
+          <LoanCalculator onCalculate={onCalculate} />
         </div>
       </div>
 
@@ -87,6 +92,7 @@ const LoanTerms = () => {
             color="primary"
             size="small"
             onClick={() => dispatch(setActiveStep({ value: 1 }))}
+            disabled={!isCalculated}
           >
             Next
           </Button>

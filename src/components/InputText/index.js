@@ -26,6 +26,8 @@ const InputText = (props) => {
     setValue,
     align = "left",
     disabled = false,
+    min,
+    max,
   } = props;
   const inputRef = useMask(mask);
   const [isPristine, setIsPristine] = useState(true);
@@ -79,6 +81,8 @@ const InputText = (props) => {
               ref={mask.mask ? inputRef : null}
               value={value ? value : internalValue}
               inputmode={inputmode}
+              min={min}
+              max={max}
               disabled={disabled}
             />
           <span

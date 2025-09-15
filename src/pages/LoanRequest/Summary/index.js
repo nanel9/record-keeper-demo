@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LoanInfoBullets from "../LoanInfoBullets";
 import { setActiveStep } from "../../../state/wizard/wizardSlice";
 import { Button, SuccessDialog, InfoBanner } from "../../../components";
@@ -11,6 +11,7 @@ const Summary = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [openSuccessDialog, setOpenSuccessDialog] = React.useState(false);
+  const calculatorResult = useSelector((state) => state.loanCalculator.calculatorResults);
 
   const handleSubmit = () => {
     setOpenSuccessDialog(true);
@@ -20,6 +21,8 @@ const Summary = () => {
     setOpenSuccessDialog(false);
     navigate("/loans-and-withdrawals");
   };
+
+  const accountbalanceReducedBy = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(parseFloat(calculatorResult.loanAmount.replace('$', '').replace(',', '')) + parseFloat(calculatorResult.deliveryFee.replace('$', '').replace(',', '')) + 85);
 
   return (
     <div className="loan-summary-container">
@@ -113,43 +116,47 @@ const Summary = () => {
             <div className="loan-summary-info-right">
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Loan type</div>
-                <div className="loan-summary-info-item-value">Personal</div>
+                <div className="loan-summary-info-item-value">{calculatorResult.loanType}</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Payment frequency</div>
-                <div className="loan-summary-info-item-value">Weekly</div>
+                <div className="loan-summary-info-item-value">{calculatorResult.paymentFrequency}</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Interest rate (APR)</div>
-                <div className="loan-summary-info-item-value">9.00% (53.89% APR)</div>
+                <div className="loan-summary-info-item-value">9.00% (10.46% APR)</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Loan amount</div>
-                <div className="loan-summary-info-item-value">$1,000.00</div>
+                <div className="loan-summary-info-item-value">{calculatorResult.loanAmount}</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Number of payments</div>
-                <div className="loan-summary-info-item-value">30</div>
+                <div className="loan-summary-info-item-value">{calculatorResult.numberOfPayments}</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Payment amount</div>
-                <div className="loan-summary-info-item-value">$34.24</div>
+                <div className="loan-summary-info-item-value">{calculatorResult.paymentAmount}</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Origination fee</div>
                 <div className="loan-summary-info-item-value">$85.00</div>
               </div>
-              <div className="loan-summary-info-item">
-                <div className="loan-summary-info-item-title">Rapid delivery fee</div>
-                <div className="loan-summary-info-item-value">$25.00</div>
-              </div>
+              {
+                calculatorResult.deliveryFee > 0 && (
+                  <div className="loan-summary-info-item">
+                    <div className="loan-summary-info-item-title">Rapid delivery fee</div>
+                    <div className="loan-summary-info-item-value">{new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(calculatorResult.deliveryFee)}</div>
+                  </div>
+                )
+              }
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Maintenance fee</div>
                 <div className="loan-summary-info-item-value">$50.00 (per year)</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Account balance reduced by</div>
-                <div className="loan-summary-info-item-value">$1,135.00</div>
+                <div className="loan-summary-info-item-value">{accountbalanceReducedBy}</div>
               </div>
               <div className="loan-summary-info-item">
                 <div className="loan-summary-info-item-title">Application and valid thru</div>

@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./styles.scss";
+
 
 const LoanInfoBullets = (props) => {
   const { hideFirst, hideOthers } = props;
+  const calculatorResult = useSelector((state) => state.loanCalculator.calculatorResults);
 
   return (
     <div className="loan-info-bullets">
@@ -10,9 +13,9 @@ const LoanInfoBullets = (props) => {
         <div className="loan-info-bullet">
           <div className="loan-info-bullet-content">
             <div className="loan-info-bullet-title">New loan terms</div>
-            <div className="loan-info-bullet-value">$1,000.00</div>
+            <div className="loan-info-bullet-value">{calculatorResult.loanAmount}</div>
             <div className="loan-info-bullet-title">
-              9.00% interest (53.89% APR), repayable in 30 weekly payments
+              9.00% interest (10.46% APR), repayable in {calculatorResult.numberOfPayments} {calculatorResult.paymentFrequency} payments
             </div>
           </div>
         </div>

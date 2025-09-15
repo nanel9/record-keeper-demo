@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import LoanInfoBullets from "../LoanInfoBullets";
 import { setActiveStep } from "../../../state/wizard/wizardSlice";
 import { Button } from "../../../components";
@@ -7,6 +8,7 @@ import "./styles.scss";
 
 const Repayment = () => {
   const dispatch = useDispatch();
+  const calculatorResult = useSelector((state) => state.loanCalculator.calculatorResults);
 
   return (
     <div className="repayment-container">
@@ -26,7 +28,7 @@ const Repayment = () => {
               <label className="repayment-info-value">Payroll method</label>
               <div className="repayment-space"></div>
               <label>Payment frequency</label>
-              <label className="repayment-info-value">Weekly</label>
+              <label className="repayment-info-value">{calculatorResult.paymentFrequency}</label>
             </div>
           </div>
 
