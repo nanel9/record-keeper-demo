@@ -14,7 +14,20 @@
     font-weight: 600;
     line-height: 20px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
+
+
+  .sub-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 4px;
+    width: 100%;
+  }
+
 
   .input-container {
     display: flex;

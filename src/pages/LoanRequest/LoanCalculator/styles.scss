@@ -1,0 +1,40 @@
+.loan-calculator-container {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+
+    .loan-calculator-left {
+        padding-right: 20px;
+        width: 50%;
+    }
+
+    .loan-calculator-right {
+        border-left: 1px solid #BFBFBF;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+    }
+
+    .loan-calculator-interest-rate{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+
+    .cg-button{
+        width: 50%;
+    }
+
+    .loan-calculator-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}   

@@ -8,6 +8,9 @@ import ChangeContributions from '../ChangeContributions';
 import GoalsCalculator from '../GoalsCalculator';
 import SavingAccounts from '../SavingAccounts';
 import ChangeInvestments from '../ChangeInvestments';
+import LoansAndWithdrawals from '../LoansAndWithdrawals';
+import LoanRequest from '../LoanRequest';
+import LoanModelingCalculator from '../LoanModelingCalculator';
 import './styles.css';
 
 const MainLayout = () => {
@@ -24,6 +27,9 @@ const MainLayout = () => {
               <Route path="/goals-calculator" element={<GoalsCalculator />} />
               <Route path="/saving-accounts" element={<SavingAccounts />} />
               <Route path="/change-investments" element={<ChangeInvestments />} />
+              <Route path="/loans-and-withdrawals" element={<LoansAndWithdrawals />} /> 
+              <Route path="/loan-request" element={<LoanRequest />} /> 
+              <Route path="/loan-modeling-calculator" element={<LoanModelingCalculator />} /> 
               <Route
                   path="*"
                   element={<Navigate to="/account-summary" replace />}

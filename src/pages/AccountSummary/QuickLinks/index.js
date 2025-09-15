@@ -17,11 +17,11 @@ const takeActionItems = [
   },
   {
     title: "Request a loan",
-    href: "#",
+    href: "/#/loans-and-withdrawals",
   },
   {
     title: "Request a withdrawal",
-    href: "#",
+    href: "/#/loans-and-withdrawals",
   },
   {
     title: "Update communication preferences",

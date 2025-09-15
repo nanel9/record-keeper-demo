@@ -17,6 +17,8 @@ import RoundButton from "./RoundButton";
 import InputSelect from "./InputSelect";
 import ToggleSwitch from "./ToggleSwitch";
 import SuccessDialog from "./SuccessDialog";
+import Dropdown from "./Dropdown";
+import CheckBox from "./CheckBox";
 
 export {
   InfoBanner,
@@ -38,4 +40,6 @@ export {
   InputSelect,
   ToggleSwitch,
   SuccessDialog,
+  Dropdown,
+  CheckBox,
 };

@@ -16,6 +16,14 @@
     width: 100%;
   }
 
+  .sub-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 4px;
+    width: 100%;
+  }
+
   .input-container {
     display: flex !important;
     flex-direction: row !important;
@@ -78,6 +86,10 @@
 
       &.center {
         text-align: center !important;
+      }
+
+      &:disabled {
+        background-color: #E5E5E5;
       }
 
     }

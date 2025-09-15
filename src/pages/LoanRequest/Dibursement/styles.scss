@@ -1,0 +1,162 @@
+.dibursement-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24px;
+
+  .dibursement-content {
+    background-color: var(--neutrals-white);
+    padding: 30px 0;
+  }
+
+  .dibursement-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dibursement-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .dibursement-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .dibursement-header-step {
+    color: #6f6f6f;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .dibursement-header-title {
+    color: #005f9e;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .dibursement-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .dibursement-info-left {
+    width: 40%;
+  }
+
+  .dibursement-info-right {
+    border-left: 1px solid #bfbfbf;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+  }
+
+  .dibursement-form-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    height: 20px;
+    padding: 3px 0;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .sub-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 4px;
+  }
+
+  .dibursement-form-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-bottom: 1px solid #adadad;
+    width: 100%;
+
+    .cg-input-text {
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+
+    &.top-border {
+      border-top: 1px solid #adadad;
+    }
+  }
+
+  .dibursement-info-title {
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  .dibursement-info-label {
+    height: 100% !important;
+  }
+
+  .dibursement-form-terms-and-conditions {
+    display: flex;
+    flex-direction: column;
+    height: 183px;
+    padding: 16px 14px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+    align-self: stretch;
+
+    border: 1px solid #000;
+    background: #fff;
+    overflow-y: scroll;
+
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */   
+  }
+}

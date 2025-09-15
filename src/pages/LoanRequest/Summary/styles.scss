@@ -1,0 +1,118 @@
+.loan-summary-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24px;
+
+  .loan-summary-content {
+    background-color: var(--neutrals-white);
+    padding: 30px 0;
+  }
+
+  .loan-summary-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loan-summary-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .loan-summary-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .loan-summary-header-step {
+    color: #6f6f6f;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .loan-summary-header-title {
+    color: #005f9e;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .loan-summary-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .loan-summary-info-left {
+    width: 40%;
+  }
+
+  .loan-summary-info-right {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    border-left: 1px solid #bfbfbf;
+    padding-left: 20px;
+  }
+
+  .loan-summary-info-item {
+    display: flex;
+    width: 474px;
+    height: 44px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    &:first-of-type {
+      border-top: 1px solid #adadad;
+    }
+    border-bottom: 1px solid #adadad;
+  }
+
+  .loan-summary-info-item-title {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .loan-summary-info-item-value {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .cg-button:not(.wizard-footer button) {
+    padding: 8px 24px;
+    height: 30px;
+  }
+
+
+  .loan-summary-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+  }
+}

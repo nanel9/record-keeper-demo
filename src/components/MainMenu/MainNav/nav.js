@@ -36,7 +36,7 @@ export const navitems = [
             {
                 title: "Loans & withdrawals",
                 icon: <PaymentsIcon sx={{ width: 24, height: 24 }} />,
-                url: "",
+                url: "#/loans-and-withdrawals",
                 id: "my-account"
             },
             {
@@ -108,7 +108,7 @@ export const navitems = [
             {
                 title: "Request a withdrawal",
                 icon: <PaymentsIcon sx={{ width: 24, height: 24 }} />,
-                url: "#",
+                url: "#/loans-and-withdrawals",
                 id: "quick-links"
             },
             {
@@ -156,7 +156,7 @@ export const navitems = [
             {
                 title: "Request a loan",
                 icon: <AttachMoneyIcon sx={{ width: 24, height: 24 }} />,
-                url: "",
+                url: "#/loans-and-withdrawals",
                 id: "quick-links"
             },      
             {

@@ -21,7 +21,7 @@ const SuccessDialog = (props) => {
             transition: Transition,
             }}
         >
-        <div className="cg-info-dialog">
+        <div className="cg-success-dialog">
           <div className="dialog-body">
             <CheckCircleIcon sx={{ width: "80px", height: "80px", color: "#929292" }} />
             <div className="dialog-title">{title}</div>

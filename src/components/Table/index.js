@@ -7,18 +7,16 @@ const Table = (props) => {
     <div className="cg-table">
       {data.title && (
         <div className="table-header">
-          <div className="table-title">
-            {data.title}
-          </div>
+          <div className="table-title">{data.title}</div>
           {data.widgets && (
-              <div className="table-widgets">
-                {data.widgets.map((widget) => (
-                  <div className="table-widget" key={widget.key}>
-                    {widget}
-                  </div>
-                ))}
-              </div>
-            )}
+            <div className="table-widgets">
+              {data.widgets.map((widget) => (
+                <div className="table-widget" key={widget.key}>
+                  {widget}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
       <table>
@@ -26,24 +24,41 @@ const Table = (props) => {
           <thead>
             <tr>
               {data.headers.map((header) => (
-                <th height={header.height} width={header.width} colspan={header.colspan} key={header.key} style={{ textAlign: header.align }}>
+                <th
+                  height={header.height}
+                  width={header.width}
+                  colspan={header.colspan}
+                  key={header.key}
+                  style={{ textAlign: header.align }}
+                >
                   {header.content}
                 </th>
               ))}
             </tr>
           </thead>
         )}
-        {data.rows && (
+        {data.rows ? (
           <tbody>
             {data.rows.map((row) => (
               <tr>
                 {row.columns.map((column) => (
-                  <td width={column.width} colspan={column.colspan} key={column.key} style={{ textAlign: column.align }}>
+                  <td
+                    width={column.width}
+                    colspan={column.colspan}
+                    key={column.key}
+                    style={{ textAlign: column.align }}
+                  >
                     {column.content}
                   </td>
                 ))}
               </tr>
             ))}
+          </tbody>
+        ) : (
+          <tbody>
+            <tr>
+              <td align="center" colSpan={data.headers.length}>No rows to show</td>
+            </tr>
           </tbody>
         )}
         {data.footer && (

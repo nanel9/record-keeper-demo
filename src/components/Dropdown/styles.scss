@@ -1,0 +1,56 @@
+.cg-dropdown {
+
+    .button-container {
+     width: 100%;
+    }
+
+    button {
+        height: calc(1.5em + 0.75rem + 2px);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        padding: 8px 24px;
+        border-radius: 0;
+        font-family: "AvenirNext";
+        border: 2px solid #005f9e;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+
+        background-color: #00294b !important;
+        border-color: #00294b !important;
+        color: #fff;    
+        height: 45px;
+
+        &:after {
+            content: "▼";
+            font-size: 10px;
+            
+        }
+    }
+
+    .dropdown-content {
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 12px;
+        background-color: #0075B5;
+        text-decoration: none !important;
+        color: #fff !important;
+        height: 52px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        border: 1px solid #D9D9D9;
+    }
+}

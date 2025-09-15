@@ -1,0 +1,28 @@
+.loan-info-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .loan-info-bullet {
+        padding: 18px 14px;
+        background-color: #e9ecef;
+    }
+    
+    .loan-info-bullet-content {
+        padding: 0 1.5rem !important;
+        text-align: left;
+    }
+    
+    .loan-info-bullet-title {
+        line-height: 20px;
+        font-size: .9rem;
+        color: #000;
+    }
+    
+    .loan-info-bullet-value {
+        line-height: 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #000;
+    }
+}

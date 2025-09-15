@@ -1,14 +1,21 @@
 .cg-info-banner {
-    background-color: #ededed;
-    padding: 1em 1.2em 1em 1.2em;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    font-size: .9rem;
-    color: #004c46;
+  background-color: #ededed;
+  padding: 1em 1.2em 1em 1.2em;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #004c46;
 
-
-&.no-background {
+  &.no-background {
     background-color: transparent;
-}
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
 }

@@ -1,0 +1,93 @@
+.documentation-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24px;
+
+  .documentation-content {
+    background-color: var(--neutrals-white);
+    padding: 30px 0;
+  }
+
+  .documentation-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .documentation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .documentation-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .documentation-header-step {
+    color: #6f6f6f;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .documentation-header-title {
+    color: #005f9e;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .documentation-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .documentation-info-left {
+    width: 40%;
+    border-right: 1px solid #bfbfbf;
+
+    padding-right: 20px;
+  }
+
+  .documentation-info-right {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+  }
+
+  label {
+    height: 20px;
+    padding: 3px 0;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    white-space: nowrap;
+  }
+}

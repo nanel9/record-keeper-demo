@@ -10,6 +10,7 @@ import "./styles.scss";
 const InputText = (props) => {
   const {
     label,
+    subLabel,
     name,
     type,
     inputmode,
@@ -24,6 +25,7 @@ const InputText = (props) => {
     suffix,
     setValue,
     align = "left",
+    disabled = false,
   } = props;
   const inputRef = useMask(mask);
   const [isPristine, setIsPristine] = useState(true);
@@ -59,7 +61,10 @@ const InputText = (props) => {
 
   return (
     <div className="cg-input-text">
-      {label && <label htmlFor={name}>{label}</label>}
+      {label && 
+        <label htmlFor={name}>{label}
+        {subLabel && <span className="sub-label">{subLabel}</span>}
+      </label>}
 
       <div className="input-container">
         {prefix && <div className="input-prefix">{prefix}</div>}
@@ -74,6 +79,7 @@ const InputText = (props) => {
               ref={mask.mask ? inputRef : null}
               value={value ? value : internalValue}
               inputmode={inputmode}
+              disabled={disabled}
             />
           <span
             className={classNames("input-error-warning", {
