@@ -3,6 +3,7 @@ import wizardReducer from "./wizard/wizardSlice";
 import savingAccountsReducer from "./savingAccounts/savingAccountsSlice";
 import navReducer from "./nav/navSlice";
 import loanCalculatorReducer from "./loanCalculator/loanCalculatorSlice";
+import withdrawalReducer from "./withdrawal/withdrawalSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     savingAccounts: savingAccountsReducer,
     nav: navReducer,
     loanCalculator: loanCalculatorReducer,
+    withdrawal: withdrawalReducer,
   },
 });

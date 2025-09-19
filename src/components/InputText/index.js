@@ -19,6 +19,7 @@ const InputText = (props) => {
     errorMessage,
     mask = {},
     onChangeExternal,
+    onBlur, 
     value,
     initialValue,
     prefix,
@@ -53,6 +54,16 @@ const InputText = (props) => {
     }
   };
 
+  const onBlurInternal = (event) => {
+    setIsPristine(false);
+    if (required) {
+      event.target.value.length > 0 ? setIsEmpty(false) : setIsEmpty(true);
+    }
+    if (onBlur) {
+      onBlur(event.target.value);
+    }
+  };
+
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -73,13 +84,14 @@ const InputText = (props) => {
         <div className="input-content">
             <input
               className={align}
+              onBlur={(event) => onBlurInternal(event)}
               onChange={(event) => validateRequired(event)}
               type={showPassword ? "text" : type}
               id={name}
               name={name}
               placeholder={placeholder}
               ref={mask.mask ? inputRef : null}
-              value={value ? value : internalValue}
+              value={value || value === "" ? value : internalValue}
               inputmode={inputmode}
               min={min}
               max={max}
@@ -113,7 +125,7 @@ const InputText = (props) => {
         {suffix && <div className="input-suffix">{suffix}</div>}
       </div>
       <div className={classNames("input-error", { hidden: !isErrorVisible() })}>
-        {required ? (errorMessage ? errorMessage : `${label} is required`) : ""}
+        {required ? (errorMessage ? errorMessage : `${label.replace("*", "")} is required`) : ""}
       </div>
     </div>
   );

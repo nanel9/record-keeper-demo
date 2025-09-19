@@ -18,6 +18,7 @@ const InputSelect = (props) => {
     suffix,
     setValue,
     options,
+    disabled,
   } = props;
   const [isPristine, setIsPristine] = useState(true);
   const [isEmpty, setIsEmpty] = useState(true);
@@ -59,6 +60,7 @@ const InputSelect = (props) => {
             id={name}
             name={name}
             placeholder={placeholder}
+            disabled={disabled}
           >
             {options.map((option) => (
               <option key={option.value} value={option.value}>

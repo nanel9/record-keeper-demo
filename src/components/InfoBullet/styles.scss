@@ -1,0 +1,22 @@
+.cg-info-bullet {
+    padding: 18px 14px;
+    background-color: #e9ecef;
+
+    .cg-info-bullet-content {
+        padding: 0 1.5rem !important;
+        text-align: left;
+    }
+    
+    .cg-info-bullet-title {
+        line-height: 20px;
+        font-size: .9rem;
+        color: #000;
+    }
+    
+    .cg-info-bullet-value {
+        line-height: 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #000;
+    }
+}

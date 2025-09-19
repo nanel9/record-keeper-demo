@@ -21,7 +21,9 @@
   /* Custom radio circle */
   .cg-radio-container .custom-radio {
     width: 16px;
+    min-width: 16px;
     height: 16px;
+    min-height: 16px;
     border: 1px solid var(--neutrals-gray-darkest);   /* blue border */
     border-radius: 50%;
     margin-right: 8px;

@@ -88,6 +88,11 @@
         text-align: center !important;
       }
 
+      &:disabled {
+        background-color: #E8F0FE;
+        color: #495057 !important;
+      }
+
     }
 
   

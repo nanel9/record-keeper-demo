@@ -1,0 +1,36 @@
+.withdrawals-container {
+    width: 100%;
+
+    .withdrawals-card {
+        background-color: #fff;
+    }   
+
+    .withdrawals-header {
+        font-size: 1.75rem;
+        letter-spacing: -0.29px;
+        font-weight: 300;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .withdrawals-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;  
+    }
+
+    td {
+     line-height: 24px !important;   
+    }
+
+    .table-header {
+        border-bottom: 2px solid #000;
+    }
+
+
+    .cg-table {
+        margin-top: 40px;
+    }
+
+}

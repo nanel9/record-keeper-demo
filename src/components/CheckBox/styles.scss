@@ -1,4 +1,10 @@
 /* Container for alignment */
+.cg-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .cg-checkbox-container {
     display: inline-flex;
     align-items: center;
@@ -7,12 +13,17 @@
     font-size: 16px;
     font-weight: 600;
     color: var(--neutrals-charcoal);
+    &.top {
+      align-items: flex-start;
+    }
   }
-  
+
   /* Hide the native checkbox */
   .cg-checkbox-container input {
     width: 20px;
     height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     
 
     &:checked {

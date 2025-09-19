@@ -37,7 +37,7 @@
           padding: 0.85rem;
           vertical-align: middle !important;
           border-top: none;
-          line-height: 35px !important;
+          line-height: 35px;
           font-size: 0.85rem;
         }
         &:last-of-type {
@@ -62,5 +62,23 @@
 
   .cg-button {
    margin: 0;
+  }
+
+  &.no-bordered-table {
+    table {
+      border: 1px solid #ccc !important;
+    }
+
+    thead tr {
+      border-bottom: none !important;
+    }
+
+    tbody tr {
+      border-bottom: none !important;
+    }
+
+    tfoot tr {
+      border-top: none !important;
+    }
   }
 }

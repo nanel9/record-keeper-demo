@@ -1,0 +1,171 @@
+.withdrawal-request-rollover-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24p;
+
+  .withdrawal-request-rollover-content {
+    background-color: var(--neutrals-white);
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .withdrawal-request-rollover-body {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .withdrawal-request-rollover-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .withdrawal-request-rollover-header-title {
+    color: #005f9e;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .withdrawal-request-rollover-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .withdrawal-request-rollover-form-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 84px;
+  }
+
+  .withdrawal-request-rollover-form-right {
+    border-left: 1px solid #bfbfbf;
+    padding-left: 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 60%;
+  }
+
+  .withdrawal-request-rollover-form-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .withdrawal-request-rollover-info-title {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0;
+    margin-top: 48px;
+
+    &.no-margin-top {
+      margin-top: 0;
+    }
+  }
+
+  .withdrawal-request-rollover-dibursement {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+
+  .withdrawal-request-rollover-personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .withdrawal-request-rollover-personal-info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    align-self: stretch;
+  }
+
+  .withdrawal-request-rollover-personal-info-item {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .withdrawal-request-rollover-dibursement-column {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  label {
+    padding: 3px 0;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .border-bottom {
+    border-bottom: 2px solid #000;
+  }
+
+  .cg-table {
+    .cg-input-text {
+      align-items: flex-end;
+    }
+
+    .input-content {
+      width: 40% !important;
+    }
+
+    .input-container {
+      justify-content: flex-end !important;
+    }
+  }
+
+  .no-bordered-table {
+    table {
+      border: 1px solid #ccc !important;
+    }
+
+    thead tr {
+      border-bottom: none !important;
+    }
+
+    tbody tr {
+      border-bottom: none !important;
+    }
+
+    tfoot tr {
+      border-top: none !important;
+    }
+  }
+}

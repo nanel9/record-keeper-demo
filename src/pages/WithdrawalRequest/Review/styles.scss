@@ -1,0 +1,192 @@
+.withdrawal-request-review-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24p;
+
+  .withdrawal-request-review-content {
+    background-color: var(--neutrals-white);
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .withdrawal-request-review-body {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .withdrawal-request-review-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .withdrawal-request-review-header-title {
+    color: #005f9e;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .withdrawal-request-review-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .withdrawal-request-review-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .withdrawal-request-review-right {
+    border-left: 1px solid #bfbfbf;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 60%;
+  }
+
+  .withdrawal-request-review-table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .withdrawal-request-review-title {
+    color: #000;
+    font-size: 22px;
+    padding: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #000;
+
+    .cg-button {
+      height: 40px;
+    }
+
+    &.no-border {
+      border-bottom: none;
+    }
+
+    &.small {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+
+  .withdrawal-request-review-beneficiaries {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    td {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+  .withdrawal-request-review-info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    align-self: stretch;
+  }
+
+  .withdrawal-request-review-info-item {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+    strong {
+      text-align: right;
+    }
+  }
+
+  .withdrawal-request-review-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .withdrawal-request-review-email {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .withdrawal-request-review-email-check {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .withdrawal-request-review-investments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  label {
+    padding: 3px 0;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .cg-input-text,
+  .cg-table {
+    width: 100%;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}

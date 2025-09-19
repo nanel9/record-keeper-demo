@@ -19,6 +19,7 @@ import ToggleSwitch from "./ToggleSwitch";
 import SuccessDialog from "./SuccessDialog";
 import Dropdown from "./Dropdown";
 import CheckBox from "./CheckBox";
+import InfoBullet from "./InfoBullet";
 
 export {
   InfoBanner,
@@ -42,4 +43,5 @@ export {
   SuccessDialog,
   Dropdown,
   CheckBox,
+  InfoBullet,
 };

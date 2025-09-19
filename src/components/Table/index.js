@@ -1,10 +1,12 @@
 import React from "react";
+import classNames from "classnames";
 import "./styles.scss";
 
+
 const Table = (props) => {
-  const { data } = props;
+  const { data, noBorderedTable } = props;
   return (
-    <div className="cg-table">
+    <div className={classNames("cg-table", noBorderedTable ? "no-bordered-table" : "")}>
       {data.title && (
         <div className="table-header">
           <div className="table-title">{data.title}</div>
@@ -47,6 +49,7 @@ const Table = (props) => {
                     colspan={column.colspan}
                     key={column.key}
                     style={{ textAlign: column.align }}
+                    height={column.height}
                   >
                     {column.content}
                   </td>

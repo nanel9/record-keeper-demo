@@ -1,0 +1,58 @@
+.withdrawal-request-overview-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+
+    gap: 24px;
+
+    .withdrawal-request-overview-content{
+        background-color: var(--neutrals-white);
+        padding: 30px 0;
+    }
+
+    .withdrawal-request-overview-body{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 880px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .withdrawal-request-overview-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    
+
+    .withdrawal-request-overview-header-title {
+        color: #005F9E;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0;
+    }
+
+    .withdrawal-request-overview-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .withdrawal-request-overview-info-title {
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0;
+    }
+}

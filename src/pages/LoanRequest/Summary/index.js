@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import LoanInfoBullets from "../LoanInfoBullets";
@@ -10,7 +10,7 @@ import "./styles.scss";
 const Summary = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [openSuccessDialog, setOpenSuccessDialog] = React.useState(false);
+  const [openSuccessDialog, setOpenSuccessDialog] = useState(false);
   const calculatorResult = useSelector((state) => state.loanCalculator.calculatorResults);
 
   const handleSubmit = () => {

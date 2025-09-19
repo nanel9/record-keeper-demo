@@ -11,6 +11,7 @@ import ChangeInvestments from '../ChangeInvestments';
 import LoansAndWithdrawals from '../LoansAndWithdrawals';
 import LoanRequest from '../LoanRequest';
 import LoanModelingCalculator from '../LoanModelingCalculator';
+import WithdrawalRequest from '../WithdrawalRequest';
 import './styles.css';
 
 const MainLayout = () => {
@@ -30,6 +31,7 @@ const MainLayout = () => {
               <Route path="/loans-and-withdrawals" element={<LoansAndWithdrawals />} /> 
               <Route path="/loan-request" element={<LoanRequest />} /> 
               <Route path="/loan-modeling-calculator" element={<LoanModelingCalculator />} /> 
+              <Route path="/withdrawal-request" element={<WithdrawalRequest />} /> 
               <Route
                   path="*"
                   element={<Navigate to="/account-summary" replace />}

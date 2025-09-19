@@ -88,15 +88,15 @@ const LoanTerms = () => {
           </div>
 
           <div className="wizard-footer">
-          <Button   
-            color="primary"
-            size="small"
-            onClick={() => dispatch(setActiveStep({ value: 1 }))}
-            disabled={!isCalculated}
-          >
-            Next
-          </Button>
-      </div>
+            <Button
+              color="primary"
+              size="small"
+              onClick={() => dispatch(setActiveStep({ value: 1 }))}
+              disabled={!isCalculated}
+            >
+              Next
+            </Button>
+          </div>
         </div>
       </div>
     </div>

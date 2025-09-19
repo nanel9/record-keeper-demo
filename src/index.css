@@ -201,3 +201,7 @@ button {
     font-family: "AvenirNext" !important;
 }
     
+div.divider {
+    border-top: 1px solid #6F6F6F;
+    width: 100%;
+}
